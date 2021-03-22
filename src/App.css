@@ -5,6 +5,15 @@
   justify-content: center;
   align-items: center;
 }
+@media (prefers-color-scheme: dark) {
+  .App {
+    background-color: #000;
+    color: white;
+  }
+  .App-content .TitleBlock img {
+    filter: invert(100%);
+  }
+}
 .App-content .TitleBlock {
   margin-bottom: 20px;
   text-align: center;
@@ -42,9 +51,30 @@
 }
 .Social .SocialNetwork img {
   width: 100%;
+  z-index: 1;
+  box-shadow: 0 0 1px rgba(255, 255, 255, 0);
 }
 .Social:hover .SocialNetwork {
   opacity: 0.3;
+}
+.Social .SocialNetwork {
+  position: relative;
+}
+.Social .SocialNetwork::after {
+  content: '';
+  background: white;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  z-index: 0;
+  width: 55%;
+  height: 40%;
+}
+.Social .SocialNetwork.ITunes::after {
+  height: 50%;
 }
 .Social:hover .SocialNetwork:hover {
   opacity: 1;
