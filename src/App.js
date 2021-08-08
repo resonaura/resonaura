@@ -2,8 +2,9 @@ import BWLogo from './assets/BWLogo.svg';
 
 import Icon_YouTube from './assets/icons/01-YouTube.svg';
 import Icon_Spotify from './assets/icons/02-Spotify.svg';
-import Icon_VKMusic from './assets/icons/03-VKMusic.svg';
-import Icon_ITunes from './assets/icons/04-ITunes.svg';
+import Icon_YMusic from './assets/icons/03-YMusic.svg';
+import Icon_VKMusic from './assets/icons/04-VKMusic.svg';
+import Icon_ITunes from './assets/icons/05-ITunes.svg';
 
 import './App.css';
 
@@ -22,6 +23,9 @@ function App() {
           </a>
           <a title="Spotify" className="SocialNetwork Spotify" href="https://open.spotify.com/artist/0KIXKuBKF6aV8zGRsSAi7y?si=58e79e02d5af4ee5">
             <img src={Icon_Spotify} alt="Spotify"></img>
+          </a>
+          <a title="Yandex Music" className="SocialNetwork YMusic" href="https://music.yandex.ru/artist/11005912">
+            <img src={Icon_YMusic} alt="Yandex Music"></img>
           </a>
           <a title="VK Music" className="SocialNetwork VKMusic" href="https://vk.com/artist/ieroglif">
             <img src={Icon_VKMusic} alt="VK Music"></img>

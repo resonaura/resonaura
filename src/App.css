@@ -76,6 +76,9 @@
 .Social .SocialNetwork.ITunes::after {
   height: 50%;
 }
+.Social .SocialNetwork.YMusic::after {
+  display: none;
+}
 .Social:hover .SocialNetwork:hover {
   opacity: 1;
 }
