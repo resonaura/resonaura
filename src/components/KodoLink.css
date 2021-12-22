@@ -1,0 +1,84 @@
+.kodo-link {
+    width: 350px;
+    min-height: 600px;
+    padding: 0px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: all 0.3s ease !important;
+    box-sizing: border-box;
+    transform: scale(0.99);
+}
+
+.kodo-link.loaded {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.kodo-link .poster-wrapper {
+    width: 250px;
+    height: 250px;
+    background-color: rgba(0,0,0, .05);
+    margin: auto;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.kodo-link .poster-wrapper .poster {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.kodo-link h1 {
+    margin: 0;
+    padding: 0;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.kodo-link .links {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.kodo-link .links .platform-link {
+    width: 100%;
+    display: flex;
+    padding: 5px;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.kodo-link .links .platform-link .platform-icon {
+    width: 25px;
+    margin-right: 15px;
+}
+
+.kodo-link .links .platform-link a {
+    margin-left: auto;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+}
+
+.kodo-link .links .platform-link button {
+    width: 150px;
+    cursor: pointer;
+    border: none;
+    background-color: var(--ui-overlay-lite);
+    color: var(--ui-text);
+    border-radius: 20px;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+.kodo-link .links .platform-link button:hover {
+    background-color: var(--ui-overlay);
+}
