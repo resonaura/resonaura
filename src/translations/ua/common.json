@@ -1,0 +1,15 @@
+{
+    "releases": {
+        "actions": {
+            "gotoanother": "Інші релізи",
+            "listen": "Слухати",
+            "chooserelease": "Обери реліз",
+            "gotoartist": "Перейти до виконавця"
+        }
+    },
+    "artist": {
+        "actions": {
+            "gotoreleases": "Перейти до релізів"
+        }
+    }
+}

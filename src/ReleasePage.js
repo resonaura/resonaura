@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import KodoLink from './components/KodoLink';
 import { Navigate, NavLink } from 'react-router-dom';
 import ProgressiveImage from 'react-progressive-image-loading';
+import { useTranslation } from 'react-i18next';
 
 export default function ReleasePage() {
     let { link } = useParams();
@@ -17,6 +18,8 @@ export default function ReleasePage() {
 
     const [releasePreviewImage, setReleasePreviewImage] = useState(null);
     const [releaseImage, setReleaseImage] = useState(null);
+
+    const {t} = useTranslation('common');
 
     useEffect(() => {
         fetch('https://api.kodo.fun/music/getReleaseInfo/?pretty_link=' + link)
@@ -74,7 +77,7 @@ export default function ReleasePage() {
             }
             <div className="action-buttons">
                 <NavLink to="/releases">
-                    <button>Другие релизы</button>
+                    <button>{t('releases.actions.gotoanother')}</button>
                 </NavLink>
             </div>
         </div>

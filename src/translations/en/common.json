@@ -1,0 +1,15 @@
+{
+    "releases": {
+        "actions": {
+            "gotoanother": "Other releases",
+            "listen": "Listen",
+            "chooserelease": "Choose a release",
+            "gotoartist": "Go to artist"
+        }
+    },
+    "artist": {
+        "actions": {
+            "gotoreleases": "Go to releases"
+        }
+    }
+}

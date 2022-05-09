@@ -6,11 +6,14 @@ import { NavLink } from 'react-router-dom';
 
 import './ReleasesPage.css';
 import ReleaseMini from './components/ReleaseMini';
+import { useTranslation } from 'react-i18next';
 
 export default function ReleasesPage() {
     const [apiErrorAlertShowed, setApiErrorAlertShowed] = useState(false);
 
     const [releases, setReleases] = useState(null);
+
+    const {t} = useTranslation('common');
 
     useEffect(() => {
         fetch('https://api.kodo.fun/music/getArtistReleases/?artist_id=1')
@@ -38,7 +41,7 @@ export default function ReleasesPage() {
         <div className="releases-page">
             <section className="title-block">
                 <img src={BWLogo} alt="иероглиф" className="logo" />
-                <h1>Выбери релиз</h1>
+                <h1>{t('releases.actions.chooserelease')}</h1>
             </section>
             <div className="releases">
                 {
@@ -50,7 +53,7 @@ export default function ReleasesPage() {
             </div>
             <div className="action-buttons">
                 <NavLink to="/">
-                    <button>Перейти к исполнителю</button>
+                    <button>{t('releases.actions.gotoartist')}</button>
                 </NavLink>
             </div>
         </div>

@@ -3,12 +3,15 @@ import { useEffect, useState } from 'react';
 import KodoLink from './components/KodoLink';
 import ProgressiveImage from 'react-progressive-image-loading';
 import { NavLink } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export default function ArtistPage() {
     const [apiErrorAlertShowed, setApiErrorAlertShowed] = useState(false);
 
     const [artist, setArtist] = useState(null);
     const [links, setLinks] = useState(null);
+
+    const {t} = useTranslation('common');
 
     useEffect(() => {
         fetch('https://api.kodo.fun/music/getArtistInfo/?id=1')
@@ -47,7 +50,7 @@ export default function ArtistPage() {
             <KodoLink loaded={artist != null} previewImage={artistPreviewImage} image={artistImage} name={artist != null ? artist.Name : ""} links={links} />
             <div className="action-buttons">
                 <NavLink to="/releases">
-                    <button>Перейти к релизам</button>
+                    <button>{t('artist.actions.gotoreleases')}</button>
                 </NavLink>
             </div>
         </div>
