@@ -1,5 +1,3 @@
-import BWLogo from './assets/BWLogo.svg';
-
 import { useEffect, useState } from 'react';
 
 import { NavLink } from 'react-router-dom';
@@ -16,7 +14,7 @@ export default function ReleasesPage() {
     const {t} = useTranslation('common');
 
     useEffect(() => {
-        fetch('https://api.kodo.fun/music/getArtistReleases/?artist_id=1')
+        fetch('https://resonaura.com/api/music/getArtistReleases/?artist_id=1')
         .then(response => response.json())
         .then(json => {
             if(json.ok)
@@ -40,7 +38,6 @@ export default function ReleasesPage() {
     return (
         <div className="releases-page">
             <section className="title-block">
-                <img src={BWLogo} alt="иероглиф" className="logo" />
                 <h1>{t('releases.actions.chooserelease')}</h1>
             </section>
             <div className="releases">

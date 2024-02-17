@@ -2,11 +2,10 @@ import PlatformLink from "./PlatformLink";
 
 import ProgressiveImage from "react-progressive-image-loading";
 
-import Icon_1 from './assets/icon/YouTube_Music.svg';
-import Icon_2 from './assets/icon/Spotify.svg';
-import Icon_3 from './assets/icon/Yandex_Music.svg';
-import Icon_4 from './assets/icon/VK_Music.svg';
-import Icon_5 from './assets/icon/Apple_Music.svg';
+import Icon_1 from './assets/icon/youtube.svg';
+import Icon_2 from './assets/icon/spotify.svg';
+import Icon_3 from './assets/icon/tidal.svg';
+import Icon_4 from './assets/icon/apple.svg';
 
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { useLocation } from 'react-router-dom';
@@ -21,7 +20,6 @@ export default function KodoLink({loaded, name, previewImage, image, links}) {
         2: Icon_2,
         3: Icon_3,
         4: Icon_4,
-        5: Icon_5
     };
 
     return (

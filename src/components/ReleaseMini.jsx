@@ -6,8 +6,8 @@ import { NavLink } from 'react-router-dom';
 import './ReleaseMini.css';
 
 export default function ReleaseMini({ link, id, name, typeName, releaseDate }) {
-    const [releasePreviewImage] = useState("https://api.kodo.fun/storage/poster/release/" + id + "-min.jpg");
-    const [releaseImage] = useState("https://api.kodo.fun/storage/poster/release/" + id + ".jpg");
+    const [releasePreviewImage] = useState("https://resonaura.com/api/storage/poster/release/" + id + "-min.jpg?v=2");
+    const [releaseImage] = useState("https://resonaura.com/api/storage/poster/release/" + id + ".jpg?v=2");
     const [releaseYear] = useState((new Date(releaseDate)).getFullYear());
     
     return (

@@ -14,7 +14,7 @@ export default function ArtistPage() {
     const {t} = useTranslation('common');
 
     useEffect(() => {
-        fetch('https://api.kodo.fun/music/getArtistInfo/?id=1')
+        fetch('https://resonaura.com/api/music/getArtistInfo/?id=1')
         .then(response => response.json())
         .then(json => {
             if(json.ok)
@@ -37,8 +37,8 @@ export default function ArtistPage() {
         });
     }, [apiErrorAlertShowed]);
 
-    const [artistPreviewImage] = useState("https://api.kodo.fun/storage/poster/artist/1-min.jpg");
-    const [artistImage] = useState("https://api.kodo.fun/storage/poster/artist/1.jpg");
+    const [artistPreviewImage] = useState("https://resonaura.com/api/storage/poster/artist/1-min.jpg?v=2");
+    const [artistImage] = useState("https://resonaura.com/api/storage/poster/artist/1.jpg?v=2");
 
     return (
         <div className="links-page artist">

@@ -22,7 +22,7 @@ export default function ReleasePage() {
     const {t} = useTranslation('common');
 
     useEffect(() => {
-        fetch('https://api.kodo.fun/music/getReleaseInfo/?pretty_link=' + link)
+        fetch('https://resonaura.com/api/music/getReleaseInfo/?pretty_link=' + link)
         .then(response => response.json())
         .then(json => {
             if(json.ok)
@@ -31,8 +31,8 @@ export default function ReleasePage() {
 
                 if(json.release != null)
                 {
-                    setReleasePreviewImage("https://api.kodo.fun/storage/poster/release/" + json.release.ID + "-min.jpg");
-                    setReleaseImage("https://api.kodo.fun/storage/poster/release/" + json.release.ID + ".jpg");
+                    setReleasePreviewImage("https://resonaura.com/api/storage/poster/release/" + json.release.ID + "-min.jpg?v=2");
+                    setReleaseImage("https://resonaura.com/api/storage/poster/release/" + json.release.ID + ".jpg?v=2");
                     setLinks(json.links);
                 }
                 else
