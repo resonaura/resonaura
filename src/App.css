@@ -1,199 +1,204 @@
 :root {
-    --ui-background: white;
-    --ui-text: black;
-    --ui-overlay-lite: rgba(0, 0, 0, .05);
-    --ui-overlay: rgba(0, 0, 0, .1);
-    --ui-accent: rgb(0,122,255);
+  --ui-background: white;
+  --ui-text: black;
+  --ui-overlay-lite: rgba(0, 0, 0, 0.05);
+  --ui-overlay: rgba(0, 0, 0, 0.1);
+  --ui-accent: rgb(0, 122, 255);
 }
 
 html {
-    background-color: var(--ui-background);
-    color: var(--ui-text);
+  background-color: var(--ui-background);
+  color: var(--ui-text);
 }
 
 body {
-    animation: fadein 0.3s;
+  animation: fadein 0.3s;
 }
 
 .app {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 2;
-    position: relative;
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  position: relative;
 }
 
 .app .links-page {
-    background-color: var(--ui-background);
-    padding: 20px;
-    box-sizing: border-box;
-    border-radius: 10px;
+  background-color: var(--ui-background);
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 10px;
 }
 
 .app .bg-cover {
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    background-size: cover;
-    z-index: -2;
-    filter: blur(50px);
-    opacity: .2;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  background-size: cover;
+  z-index: -2;
+  filter: blur(50px);
+  opacity: 0.2;
 }
 
 .app .action-buttons {
-    animation: fadein 0.3s;
-    opacity: 0;
-    animation-delay: 0.1s;
-    animation-fill-mode: forwards;
+  animation: fadein 0.3s;
+  opacity: 0;
+  animation-delay: 0.1s;
+  animation-fill-mode: forwards;
 }
 
 .app .action-buttons a button {
-    width: calc(100% - 15px);
-    cursor: pointer;
-    border: none;
-    background-color: var(--ui-overlay-lite);
-    color: var(--ui-text);
-    border-radius: 20px;
-    padding: 10px;
-    box-sizing: border-box;
-    margin-top: 10px;
-    transition: all 0.3s ease;
+  width: calc(100% - 15px);
+  cursor: pointer;
+  border: none;
+  background-color: var(--ui-overlay-lite);
+  color: var(--ui-text);
+  border-radius: 20px;
+  padding: 10px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  transition: all 0.3s ease;
 }
 
 .app .action-buttons a button:hover {
-    background-color: var(--ui-overlay);
+  background-color: var(--ui-overlay);
 }
 
 a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 @keyframes fadein {
-    from { opacity: 0; transform: scale(0.95); }
-    to   { opacity: 1; transform: scale(1); }
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @media (prefers-color-scheme: dark) {
-    :root {
-        --ui-background: black;
-        --ui-text: white;
-        --ui-overlay-lite: rgba(255,255,255,.05);
-        --ui-overlay: rgba(255,255,255,.1);
-    }
+  :root {
+    --ui-background: black;
+    --ui-text: white;
+    --ui-overlay-lite: rgba(255, 255, 255, 0.05);
+    --ui-overlay: rgba(255, 255, 255, 0.1);
+  }
 
-    .app .links-page {
-        background-color: transparent;
-    }
+  .app .links-page {
+    background-color: transparent;
+  }
 
-    .bg-cover {
-        display: none;
-    }
+  .bg-cover {
+    display: none;
+  }
 
-    .app-content .TitleBlock img {
-        filter: invert(100%);
-    }
+  .app-content .TitleBlock img {
+    filter: invert(100%);
+  }
 }
 
 @media screen and (max-width: 1000px) {
-    html .release-mini .poster {
-        width: 160px;
-        height: 160px;
-    }
+  html .release-mini .poster {
+    width: 160px;
+    height: 160px;
+  }
 }
 
 @media screen and (max-width: 830px) {
-    html .release-mini .poster {
-        width: 150px;
-        height: 150px;
-    }
+  html .release-mini .poster {
+    width: 150px;
+    height: 150px;
+  }
 }
 
 @media screen and (max-width: 783px) {
-    html .releases-page .releases {
-        max-width: 500px;
-        margin-bottom: 20px;
-    }
+  html .releases-page .releases {
+    max-width: 500px;
+    margin-bottom: 20px;
+  }
 }
 
 @media screen and (max-width: 660px) {
-    .releases-page .action-buttons {
-        width: 80%;
-    }
+  .releases-page .action-buttons {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 470px) {
-    html {
-        zoom: .9;
-    }
+  html {
+    zoom: 0.9;
+  }
 
-    html .links-page {
-        max-width: 100%;
-        width: 100%;
-    }
+  html .links-page {
+    max-width: 100%;
+    width: 100%;
+  }
 
-    html .links-page .kodo-link {
-        width: 100%;
-    }
+  html .links-page .kodo-link {
+    width: 100%;
+  }
 
-    .bg-cover {
-        display: none;
-    }
+  .bg-cover {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 400px) {
-    html {
-        zoom: .8;
-    }
+  html {
+    zoom: 0.8;
+  }
 }
 
 @media screen and (max-width: 300px) {
-    html {
-        zoom: .7;
-    }
+  html {
+    zoom: 0.7;
+  }
 }
 
 @media screen and (max-height: 800px) {
-    html .kodo-link {
-        min-height: 100%;
-    }
+  html .kodo-link {
+    min-height: 100%;
+  }
 
-    html .kodo-link .poster-wrapper {
-        width: 250px;
-        height: 250px;
-    }
+  html .kodo-link .poster-wrapper {
+    width: 250px;
+    height: 250px;
+  }
 }
 
 @media screen and (max-height: 800px) and (orientation: landscape) {
-    html .kodo-link .poster-wrapper {
-        width: 150px;
-        height: 150px;
-    }
+  html .kodo-link .poster-wrapper {
+    width: 150px;
+    height: 150px;
+  }
 }
 
-
 @media screen and (min-width: 1920px) {
-    html {
-        zoom: 1.2;
-    }
+  html {
+    zoom: 1.2;
+  }
 }
 
 @media screen and (min-width: 2048px) {
-    html {
-        zoom: 1.4;
-    }
+  html {
+    zoom: 1.4;
+  }
 }
 
 @media screen and (min-width: 3840px) {
-    html {
-        zoom: 2.4;
-    }
+  html {
+    zoom: 2.4;
+  }
 }
 
 iframe {
-    display: none;
+  display: none;
 }

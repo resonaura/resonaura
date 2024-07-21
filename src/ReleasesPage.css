@@ -1,45 +1,48 @@
 .releases-page {
-    text-align: center;
-    animation: fadein 0.5s;
-    max-height: 600px;
+  text-align: center;
+  animation: fadein 0.5s;
+  max-height: 2000px;
+  padding: 50px;
+  box-sizing: border-box;
+  margin: 0;
 }
 
 .releases-page .logo {
-    width: 100px;
-    margin: auto;
-    margin-bottom: 20px;
+  width: 100px;
+  margin: auto;
+  margin-bottom: 20px;
 }
 
 .releases-page h1 {
-    text-align: center;
-    margin: 0;
-    padding: 0;
-    font-weight: 400;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
 }
 
 .releases-page .releases {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 20px;
-    height: fit-content;
-    max-width: 1000px;
-    padding-left: 50px;
-    padding-right: 50px;
-    box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  height: fit-content;
+  max-width: 1200px;
+  padding-left: 50px;
+  padding-right: 50px;
+  box-sizing: border-box;
 }
 
 .releases-page .action-buttons {
-    margin: auto;
-    margin-top: 20px;
-    max-width: 500px;
-    padding-bottom: 50px;
+  margin: auto;
+  margin-top: 20px;
+  max-width: 500px;
+  padding-bottom: 50px;
 }
 
 .releases-page .releases:hover .release-mini {
-    opacity: 0.5;
+  opacity: 0.5;
 }
 
 .releases-page .releases .release-mini:hover {
-    opacity: 1;
+  opacity: 1;
 }
