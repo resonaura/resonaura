@@ -263,7 +263,7 @@ Before building real-time audio engines and distributed AI backends, I started p
   <img src="media/robohero-gameplay.png" width="760" alt="Robohero vs Zombies Gameplay" />
 </p>
 
-When the unversioned project files corrupted during development, the original FLA source was lost. That harsh lesson sparked an enduring obsession with version control, redundant backups, and defensive system architecture. The compiled SWF binaries survived and remain playable in modern browsers via WebAssembly.
+When the unversioned project files corrupted during development, the original FLA source was lost. Rather than quitting, we started over from scratch with a revamped neon interface. That harsh lesson sparked an enduring obsession with version control, redundant backups, and defensive system architecture. Both milestones survive as compiled SWF binaries, playable in modern browsers via WebAssembly.
 
 ---
 
