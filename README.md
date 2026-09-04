@@ -43,22 +43,6 @@ A live performance workstation designed for zero-dropout multitrack playback syn
 - **Stage Lighting Engine**: Generates 60 Hz fixture control packets across DMX-512, Art-Net, and sACN (ANSI E1.31) over UDP, alongside a custom binary protocol driving networked ESP32 microcontrollers.
 - **3D Visualizer**: Real-time WebGL stage visualizer in Three.js rendering moving heads, trusses, and beam geometry at 60 FPS.
 
-### ResoPatch
-*Interactive Stage Routing Graph & Technical Rider Generator*  
-**Stack**: React 19, TypeScript 5.9, @xyflow/react, libavoid-js (WASM), HeroUI v3, NestJS 11, Fastify, SQLite, Puppeteer  
-**Repo**: [resonaura/resopatch](https://github.com/resonaura/resopatch)
-
-Interactive audio patchbay coordinator translating complex stage cabling, pedalboards, audio interfaces, and electrical distribution into a validated visual node graph.
-
-<p align="center">
-  <img src="media/resopatch.png" width="760" alt="ResoPatch Stage Routing Canvas" />
-</p>
-
-- **WASM Obstacle Avoidance Routing**: Integrates libavoid compiled to WebAssembly inside an isolated Web Worker to compute dynamic orthogonal cable trajectories that navigate around hardware equipment footprints.
-- **Physical Boundary Validation**: Enforces signal compatibility across balanced line level, microphone signals, high-Z instrument inputs, and isolated DC pedalboard rails.
-- **Automated Technical Rider Generation**: Evaluates stage box topology to compile FOH channel assignment charts, backline requirements, and packing checklists into printable A4 PDFs via headless Puppeteer.
-- **Real-Time Collaboration**: Propagates patch updates and mute states between stage crew and FOH engineers during soundchecks over low-latency Socket.IO channels.
-
 ### Indago AI Platform & Multi-Agent Runtime
 *Lead AI Platform Engineer & Systems Architect (IndagoDev)*  
 **Stack**: Node.js, NestJS, Python (FastAPI), vLLM, Ollama, LangGraph, Redis, PostgreSQL, MinIO, Docker
@@ -80,6 +64,22 @@ Execution runtime and distributed coordination layer for independent autonomous 
 - Built an execution engine with process isolation, daemon RPC connection pooling, and stale socket eviction.
 - Developed a visual activity feed where autonomous agents publish execution checkpoints, generated artifacts, media snippets, and quote interactions in real time.
 - Implemented containerized sandboxes with resource quota enforcement and dynamic work scheduling.
+
+### ResoPatch
+*Interactive Stage Routing Graph & Technical Rider Generator*  
+**Stack**: React 19, TypeScript 5.9, @xyflow/react, libavoid-js (WASM), HeroUI v3, NestJS 11, Fastify, SQLite, Puppeteer  
+**Repo**: [resonaura/resopatch](https://github.com/resonaura/resopatch)
+
+Interactive audio patchbay coordinator translating complex stage cabling, pedalboards, audio interfaces, and electrical distribution into a validated visual node graph.
+
+<p align="center">
+  <img src="media/resopatch.png" width="760" alt="ResoPatch Stage Routing Canvas" />
+</p>
+
+- **WASM Obstacle Avoidance Routing**: Integrates libavoid compiled to WebAssembly inside an isolated Web Worker to compute dynamic orthogonal cable trajectories that navigate around hardware equipment footprints.
+- **Physical Boundary Validation**: Enforces signal compatibility across balanced line level, microphone signals, high-Z instrument inputs, and isolated DC pedalboard rails.
+- **Automated Technical Rider Generation**: Evaluates stage box topology to compile FOH channel assignment charts, backline requirements, and packing checklists into printable A4 PDFs via headless Puppeteer.
+- **Real-Time Collaboration**: Propagates patch updates and mute states between stage crew and FOH engineers during soundchecks over low-latency Socket.IO channels.
 
 ### RSNRA Music Ecosystem & Interactive Web
 *Streaming Infrastructure, Digital Identity & Creative Homages*  
@@ -120,6 +120,12 @@ Execution runtime and distributed coordination layer for independent autonomous 
   <img src="media/flopster.png" width="760" alt="Flopster Floppy Synth Plugin" />
 </p>
 
+- **[resobox-core](https://github.com/resonaura/resobox-core)** & **[resobox-ui](https://github.com/resonaura/resobox-ui)**: Low-latency audio processing DSP engine and interface built for a custom hardware guitar pedalboard.
+
+<p align="center">
+  <img src="media/resobox.jpg" width="460" alt="ResoBox Hardware Prototype" />
+</p>
+
 - **[shaitan-delay](https://github.com/resonaura/shaitan-delay)**: Stereo delay audio plugin (VST3) with adjustable tape saturation, feedback filtering, and tempo sync.
 
 <p align="center">
@@ -130,12 +136,6 @@ Execution runtime and distributed coordination layer for independent autonomous 
 
 <p align="center">
   <img src="media/owlydist.png" width="760" alt="OwlyDist Elementary Audio Plugin" />
-</p>
-
-- **[resobox-core](https://github.com/resonaura/resobox-core)** & **[resobox-ui](https://github.com/resonaura/resobox-ui)**: Low-latency audio processing DSP engine and interface built for a custom hardware guitar pedalboard.
-
-<p align="center">
-  <img src="media/resobox.jpg" width="460" alt="ResoBox Hardware Prototype" />
 </p>
 
 - **[foxled](https://github.com/resonaura/foxled)**: Ambient backlighting workstation with low-latency NAudio WASAPI loopback capture, real-time FFT spectrum analysis, and serial Adalight streaming.
@@ -168,9 +168,37 @@ Execution runtime and distributed coordination layer for independent autonomous 
 
 ---
 
+## Interactive & Web Applications
+
+- **[KidCanvas](https://kidcanvas.skrinkaznan.com/)**: Collaborative real-time digital canvas platform for children and educators. Features instantaneous multi-user stroke synchronization over WebSockets, HTML5 Canvas rendering, and clean drawing tools.
+
+<p align="center">
+  <img src="media/kidcanvas.png" width="760" alt="KidCanvas Collaborative Canvas" />
+</p>
+
+- **[Personal Portfolio](https://github.com/resonaura/portfolio)** ([vynohradov.ca](https://vynohradov.ca)): Interactive personal portfolio website featuring custom Three.js GLSL fluid simulation shaders, iPadOS magnetic cursor physics, and responsive slide layouts.
+- **Alchemy** ([portfolio](https://github.com/resonaura/portfolio)): Multi-model LLM workspace and Chrome extension interface coordinating prompt pipelines across OpenAI and Claude APIs.
+
+<p align="center">
+  <img src="media/alchemy.png" width="760" alt="Alchemy AI Workspace" />
+</p>
+
+- **UniVent** ([portfolio](https://github.com/resonaura/portfolio)): Cross-platform mobile event discovery application built with React Native, TypeScript, and native bridge modules for iOS and Android.
+
+<p align="center">
+  <img src="media/univent.png" width="760" alt="UniVent Mobile App" />
+</p>
+
+- **[maria-portfolio](https://github.com/resonaura/maria-portfolio)**: Designer portfolio SPA with a custom NestJS / Fastify / Sharp image transformation engine and dynamic luminance mapping.
+
+<p align="center">
+  <img src="media/maria-portfolio.png" width="760" alt="Maria Portfolio Website" />
+</p>
+
+---
+
 ## Windows Systems & Desktop Utilities
 
-- **[apps-indexator](https://github.com/resonaura/apps-indexator)**: High-speed Windows application indexer and icon extractor using direct Win32, Shell32, and GDI32 system calls.
 - **[foxdock](https://github.com/resonaura/foxdock)**: Windows application dock featuring Fluent Acrylic design, shell integration, and background IPC daemon.
 
 <p align="center">
@@ -189,6 +217,7 @@ Execution runtime and distributed coordination layer for independent autonomous 
   <img src="media/isekai-sub-tool.jpg" width="760" alt="Isekai Sub Tool Interface" />
 </p>
 
+- **[apps-indexator](https://github.com/resonaura/apps-indexator)**: High-speed Windows application indexer and icon extractor using direct Win32, Shell32, and GDI32 system calls.
 - **[filerabbit](https://github.com/resonaura/filerabbit)**: Cloud file storage and sharing web application built on ASP.NET Core and Entity Framework Core.
 
 <p align="center">
@@ -197,7 +226,7 @@ Execution runtime and distributed coordination layer for independent autonomous 
 
 ---
 
-## Infrastructure, Automation & Community Bots
+## Infrastructure, Automation & Tooling
 
 - **[gsync](https://github.com/resonaura/gsync)**: Interactive Terminal UI (TUI) for real-time bi-directional cloud synchronization with Google Drive, rsync, and rclone.
 
@@ -206,47 +235,17 @@ Execution runtime and distributed coordination layer for independent autonomous 
 </p>
 
 - **[miku-renderer](https://github.com/resonaura/miku-renderer)**: Declarative Node.js and FFmpeg multi-track video composition engine with render queue management.
-- **[rocket-alert-monitor](https://github.com/resonaura/rocket-alert-monitor)**: Real-time emergency siren and missile alert monitoring service with push notification dispatch.
 - **[resomd](https://github.com/resonaura/resomd)**: Live split-pane markdown editor with block-level scroll synchronization, cloud autosave, and headless PDF export.
 
 <p align="center">
   <img src="media/resomd.png" width="760" alt="ResoMD Markdown Editor" />
 </p>
 
+- **[rocket-alert-monitor](https://github.com/resonaura/rocket-alert-monitor)**: Real-time emergency siren and missile alert monitoring service with push notification dispatch.
 - **[bottogram](https://github.com/resonaura/bottogram)**: PHP 8 Telegram bot framework with an integrated administrative interface and conversion funnels.
 - **[foxy-mvc](https://github.com/resonaura/foxy-mvc)**: Lightweight PHP 8 MVC framework optimized for shared hosting environments.
 - **[webpack-unicode-plugin](https://github.com/resonaura/webpack-unicode-plugin)**: Webpack compiler plugin preventing Unicode character corruption in bundled production assets.
 - **vagachat-bot & vagakeeper** *(Private)*: Community protection, anti-spam, and member verification bots built for musician and blogger Vaganych's Telegram community.
-
----
-
-## Interactive & Web Applications
-
-- **[KidCanvas](https://kidcanvas.skrinkaznan.com/)**: Collaborative real-time digital canvas platform for children and educators. Features instantaneous multi-user stroke synchronization over WebSockets, HTML5 Canvas rendering, and clean drawing tools.
-
-<p align="center">
-  <img src="media/kidcanvas.png" width="760" alt="KidCanvas Collaborative Canvas" />
-</p>
-
-- **[Personal Portfolio](https://github.com/resonaura/portfolio)** ([vynohradov.ca](https://vynohradov.ca)): Interactive personal portfolio website featuring custom Three.js GLSL fluid simulation shaders, iPadOS magnetic cursor physics, and responsive slide layouts.
-- **[maria-portfolio](https://github.com/resonaura/maria-portfolio)**: Designer portfolio SPA with a custom NestJS / Fastify / Sharp image transformation engine and dynamic luminance mapping.
-
-<p align="center">
-  <img src="media/maria-portfolio.png" width="760" alt="Maria Portfolio Website" />
-</p>
-
-- **Alchemy** ([portfolio](https://github.com/resonaura/portfolio)): Multi-model LLM workspace and Chrome extension interface coordinating prompt pipelines across OpenAI and Claude APIs.
-
-<p align="center">
-  <img src="media/alchemy.png" width="760" alt="Alchemy AI Workspace" />
-</p>
-
-- **UniVent** ([portfolio](https://github.com/resonaura/portfolio)): Cross-platform mobile event discovery application built with React Native, TypeScript, and native bridge modules for iOS and Android.
-
-<p align="center">
-  <img src="media/univent.png" width="760" alt="UniVent Mobile App" />
-</p>
-
 - **[noir-chrome-theme](https://github.com/resonaura/noir-chrome-theme)**: Minimalist deep black theme for Google Chrome.
 
 ---
