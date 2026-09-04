@@ -3,57 +3,80 @@
 **Systems Architect & Lead Backend Engineer**  
 Victoria, BC, Canada • [vynohradov.ca](https://vynohradov.ca) • [LinkedIn](https://linkedin.com/in/resonaura) • [Email](mailto:andrii.vynohradov@gmail.com) • [CV (PDF)](cv.pdf) • [Credentials](https://certificates.vynohradov.ca)
 
-[![C++](https://img.shields.io/badge/C%2B%2B-20-00599C.svg?style=flat-square&logo=c%2B%2B&logoColor=white)](#)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6.svg?style=flat-square&logo=typescript&logoColor=white)](#)
-[![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg?style=flat-square&logo=python&logoColor=white)](#)
-[![C#](https://img.shields.io/badge/C%23-.NET%208%20%7C%204.7.2-239120.svg?style=flat-square&logo=csharp&logoColor=white)](#)
-[![Node.js](https://img.shields.io/badge/Node.js-20%2B-339933.svg?style=flat-square&logo=nodedotjs&logoColor=white)](#)
-[![WebAssembly](https://img.shields.io/badge/WASM-libavoid-654FF0.svg?style=flat-square&logo=webassembly&logoColor=white)](#)
-[![JUCE](https://img.shields.io/badge/Audio%20Framework-JUCE%209-black.svg?style=flat-square)](#)
-[![Lighting](https://img.shields.io/badge/Lighting-DMX512%20%7C%20Art--Net%20%7C%20sACN-F7931E.svg?style=flat-square)](#)
-[![Protocols](https://img.shields.io/badge/Protocols-MIDI%20%7C%20WebSockets%20%7C%20RTSP%20%7C%20WebRTC-4B0082.svg?style=flat-square)](#)
-[![Backend](https://img.shields.io/badge/Backend-NestJS%20%7C%20FastAPI-E0234E.svg?style=flat-square&logo=nestjs&logoColor=white)](#)
-[![Database](https://img.shields.io/badge/Database-PostgreSQL%20%7C%20pgvector-4169E1.svg?style=flat-square&logo=postgresql&logoColor=white)](#)
-[![Cache](https://img.shields.io/badge/Cache-Redis%20%7C%20BullMQ-DC382D.svg?style=flat-square&logo=redis&logoColor=white)](#)
-[![Storage](https://img.shields.io/badge/Storage-MinIO%20S3-C72C48.svg?style=flat-square&logo=minio&logoColor=white)](#)
-[![Infra](https://img.shields.io/badge/Infra-Docker%20%7C%20Ubuntu%20Bare--Metal-2496ED.svg?style=flat-square&logo=docker&logoColor=white)](#)
-[![Frontend](https://img.shields.io/badge/Frontend-React%2019%20%7C%20Next.js-61DAFB.svg?style=flat-square&logo=react&logoColor=black)](#)
-[![Graphics](https://img.shields.io/badge/Graphics-Three.js%20(WebGL)-049EF4.svg?style=flat-square&logo=threedotjs&logoColor=white)](#)
-[![Desktop](https://img.shields.io/badge/Desktop-Electron%20%7C%20WPF-47848F.svg?style=flat-square&logo=electron&logoColor=white)](#)
+| Systems, DSP & Low-Latency | Distributed Platforms & AI | Edge Media & Hardware Protocols | High-Perf Web & WASM |
+| :--- | :--- | :--- | :--- |
+| **C++20**, **JUCE 9**, SIMD | **Node.js**, **NestJS**, **FastAPI** | **RTSP**, **WebRTC**, **H.264/HEVC** | **WebAssembly** (C++ to WASM) |
+| SPSC Lock-Free Ring Buffers | **vLLM**, **Ollama**, **LangGraph** | **DMX-512**, **Art-Net**, **sACN** | **Three.js**, WebGL Shaders |
+| Zero-Heap Audio Callbacks | **PostgreSQL**, **pgvector**, **Redis** | **BLE GATT**, **MQTT**, **WASAPI** | **React 19**, **TypeScript 5.x** |
 
-I build low-latency real-time systems in C++, distributed backend architectures, and production AI agent runtimes. My background spans real-time digital signal processing, lock-free concurrency, high-throughput video streaming, and hardware automation protocols.
+I architect deterministic real-time C++ systems, distributed AI agent execution runtimes, and hardware-accelerated media streaming pipelines. My background spans real-time digital signal processing, lock-free concurrency, protocol reverse engineering, and low-latency edge computing.
 
 ---
 
-## Featured Systems & Engineering Work
+## Tier 1: Real-Time Systems, Audio DSP & Hardware Protocols
 
 ### ResoStage
 *Real-Time Live Performance DAW & Stage Lighting Sequencer (Private Codebase)*  
 **Stack**: C++20, JUCE 9, Lock-Free Concurrency, Electron, React 19, Three.js, WebSockets, DMX-512, Art-Net, sACN
 
-A live performance workstation designed for zero-dropout multitrack playback synchronized with automated lighting rigs.
+Real-time live performance workstation designed for deterministic zero-dropout multitrack playback synchronized with automated stage lighting rigs.
 
 <p align="center">
   <img src="media/resostage.png" width="760" alt="ResoStage Workstation UI" />
 </p>
 
-- **Audio Engine**: Operates under a strict zero-heap-allocation policy in the audio callback. Utilizes precomputed 64-point Kaiser-windowed Sinc interpolation for pitch shifting and sample-accurate clock sync across 32+ tracks.
-- **Lock-Free Concurrency**: Audio threads communicate with background workers through single-producer single-consumer (SPSC) ring buffers and atomic state flags, eliminating priority inversions and audio dropouts during disk read stalls.
-- **Process Supervisor (Kaishaku)**: A native daemon monitors application processes over local IPC heartbeat channels. If the Electron UI crashes during a live show, the audio engine continues running uninterrupted while the supervisor relaunches the interface within 300 milliseconds.
+- **Deterministic Audio Engine**: Operates under a strict zero-heap-allocation policy within the real-time audio callback loop. Utilizes precomputed 64-point Kaiser-windowed Sinc interpolation for pitch shifting and sample-accurate clock synchronization across 32+ simultaneous stems.
+- **Lock-Free Concurrency**: Audio threads communicate with background disk workers and UI decoders through single-producer single-consumer (SPSC) ring buffers and atomic memory fences, eliminating mutex contention, priority inversions, and buffer underruns during disk read stalls.
+- **Process Supervisor (Kaishaku)**: A native daemon monitors application processes over local IPC heartbeat channels. If the Electron UI crashes during a live performance, the audio engine continues running uninterrupted while the supervisor relaunches the interface within 300 milliseconds.
 - **Stage Lighting Engine**: Generates 60 Hz fixture control packets across DMX-512, Art-Net, and sACN (ANSI E1.31) over UDP, alongside a custom binary protocol driving networked ESP32 microcontrollers.
-- **3D Visualizer**: Real-time WebGL stage visualizer in Three.js rendering moving heads, trusses, and beam geometry at 60 FPS.
+- **3D Spatial Visualizer**: Real-time WebGL stage visualizer in Three.js rendering moving heads, concert trusses, and volumetric light beam geometry at 60 FPS.
+
+### Native Audio DSP Plugins & Embedded Silicon
+- **[scratcher](https://github.com/resonaura/scratcher)**: Dual-deck vinyl scratch emulator audio plugin and standalone instrument built with JUCE 8 and C++17. Implements rotational physics simulations, fractional delay time-stretching, and bidirectional MIDI control surface mapping.
+
+<p align="center">
+  <img src="media/scratcher.gif" width="720" alt="Scratcher JUCE Audio Plugin" />
+</p>
+
+- **[flopster](https://github.com/resonaura/flopster)**: Software synthesizer (VST3, AU, Standalone) simulating retro floppy drive acoustics and mechanical stepping motor resonance via physical modeling synthesis and custom vector UI controls.
+
+<p align="center">
+  <img src="media/flopster.png" width="760" alt="Flopster Floppy Synth Plugin" />
+</p>
+
+- **[resobox-core](https://github.com/resonaura/resobox-core)** & **[resobox-ui](https://github.com/resonaura/resobox-ui)**: Embedded Real-Time Audio Appliance. Custom hardware guitar pedalboard powered by an embedded DSP unit executing fixed-point filtering with hardware interrupts, direct memory bus ADC/DAC communication, and zero-allocation processing loops.
+
+<p align="center">
+  <img src="media/resobox.jpg" width="460" alt="ResoBox Hardware Prototype" />
+</p>
+
+- **[shaitan-delay](https://github.com/resonaura/shaitan-delay)**: Stereo delay audio plugin (VST3) featuring analog tape saturation modeling, non-linear feedback damping filters, and host tempo synchronization.
+
+<p align="center">
+  <img src="media/shaitan-delay.png" width="680" alt="Shaitan Delay VST3 Plugin" />
+</p>
+
+- **[owlydist](https://github.com/resonaura/owlydist)**: Audio distortion plugin (VST3) powered by the Elementary Audio DSP engine, implementing customizable transfer-curve waveshaping and asymmetric clipping algorithms.
+
+<p align="center">
+  <img src="media/owlydist.png" width="760" alt="OwlyDist Elementary Audio Plugin" />
+</p>
+
+---
+
+## Tier 2: Distributed Platforms, AI Agent Runtimes & Media Streaming
 
 ### Indago AI Platform & Multi-Agent Runtime
 *Lead AI Platform Engineer & Systems Architect (IndagoDev)*  
 **Stack**: Node.js, NestJS, Python (FastAPI), vLLM, Ollama, LangGraph, Redis, PostgreSQL, MinIO, Docker
 
-Architected the distributed infrastructure for multi-step autonomous agent execution and local model inference.
+Distributed infrastructure and execution runtime for multi-step autonomous agent execution and local LLM inference.
 
-- Decomposed a legacy monolithic backend into event-driven NestJS microservices, supporting 1,000+ parallel AI agents while cutting p95 gateway latency from 450ms to 315ms under heavy load.
+- Decomposed a legacy monolithic backend into event-driven NestJS microservices with backpressure management, supporting 1,000+ parallel AI agents while cutting p95 gateway latency from 450ms to 315ms under high concurrency.
 - Built a production Hybrid RAG pipeline combining pgvector similarity search with structured metadata pre-filtering, reducing token overhead by ~40%.
 - Deployed a distributed bare-metal MinIO S3 storage cluster on Linux servers, eliminating 70% of cloud data storage and egress expenses.
 - Implemented real-time WebSocket telemetry streaming with sub-100ms client updates for active user sessions.
-- Provisioned sandboxed container execution environments with automated health checks and self-healing worker pools.
+- Provisioned sandboxed container execution environments with automated health checks, memory limits, and self-healing worker pools.
 
 ### Autonomous Agent Runtime & Visual Stream
 *AI Agent Operating Infrastructure & Activity Feed (Private Codebase)*  
@@ -61,12 +84,26 @@ Architected the distributed infrastructure for multi-step autonomous agent execu
 
 Execution runtime and distributed coordination layer for independent autonomous AI agents.
 
-- Built an execution engine with process isolation, daemon RPC connection pooling, and stale socket eviction.
+- Built an execution engine featuring process isolation, daemon RPC connection pooling, and stale socket eviction.
 - Developed a visual activity feed where autonomous agents publish execution checkpoints, generated artifacts, media snippets, and quote interactions in real time.
 - Implemented containerized sandboxes with resource quota enforcement and dynamic work scheduling.
 
+### Edge Video Ingestion & Hardware Transcoding
+- **[scrypted-tuya](https://github.com/resonaura/scrypted-tuya)**: Low-Latency Edge Video Ingestion Pipeline. Standalone camera bridge interfacing directly with Tuya hardware, demuxing proprietary WebRTC feeds into standard sub-second RTSP relays with zero-copy packet forwarding and no cloud dependencies.
+
+<p align="center">
+  <img src="media/scrypted-tuya.png" width="760" alt="Tuya Bridge Dashboard" />
+</p>
+
+- **[snappie](https://github.com/resonaura/snappie)**: Hardware-accelerated multi-camera RTSP snapshot server featuring zero-disk in-memory ring buffers, supporting NVENC/CUDA, Intel VA-API/QSV, and Apple VideoToolbox.
+- **[aqara-g5pro-mqtt](https://github.com/resonaura/aqara-g5pro-mqtt)**: Universal MQTT and RTSP integration bridge for Home Assistant featuring low-latency bidirectional two-way audio talkback.
+
+---
+
+## Tier 3: WebAssembly, High-Performance Web & Platform Architecture
+
 ### ResoPatch
-*Interactive Stage Routing Graph & Technical Rider Generator*  
+*In-Browser Computational Geometry Engine & Technical Rider Generator*  
 **Stack**: React 19, TypeScript 5.9, @xyflow/react, libavoid-js (WASM), HeroUI v3, NestJS 11, Fastify, SQLite, Puppeteer  
 **Repo**: [resonaura/resopatch](https://github.com/resonaura/resopatch)
 
@@ -76,8 +113,8 @@ Interactive audio patchbay coordinator translating complex stage cabling, pedalb
   <img src="media/resopatch.png" width="760" alt="ResoPatch Stage Routing Canvas" />
 </p>
 
-- **WASM Obstacle Avoidance Routing**: Integrates libavoid compiled to WebAssembly inside an isolated Web Worker to compute dynamic orthogonal cable trajectories that navigate around hardware equipment footprints.
-- **Physical Boundary Validation**: Enforces signal compatibility across balanced line level, microphone signals, high-Z instrument inputs, and isolated DC pedalboard rails.
+- **WASM Obstacle Avoidance Routing**: Compiles the native C++ `libavoid` library to WebAssembly inside an isolated Web Worker, executing dynamic A* pathfinding and orthogonal obstacle avoidance to route complex cable trajectories without overlapping hardware footprints.
+- **Physical Boundary Validation**: Enforces electrical and impedance compatibility rules across balanced line level, microphone signals, high-Z instrument inputs, and isolated DC pedalboard rails.
 - **Automated Technical Rider Generation**: Evaluates stage box topology to compile FOH channel assignment charts, backline requirements, and packing checklists into printable A4 PDFs via headless Puppeteer.
 - **Real-Time Collaboration**: Propagates patch updates and mute states between stage crew and FOH engineers during soundchecks over low-latency Socket.IO channels.
 
@@ -104,79 +141,14 @@ Interactive audio patchbay coordinator translating complex stage cabling, pedalb
   <img src="media/authorplay.png" width="760" alt="AuthorPlay Web Streaming" />
 </p>
 
----
-
-## Audio DSP Plugins & Hardware Instruments
-
-- **[scratcher](https://github.com/resonaura/scratcher)**: Dual-deck vinyl scratch emulator audio plugin and standalone instrument built with JUCE 8 and C++17. Features realistic turntable physics, time-stretching, and MIDI control surface mapping.
-
-<p align="center">
-  <img src="media/scratcher.gif" width="720" alt="Scratcher JUCE Audio Plugin" />
-</p>
-
-- **[flopster](https://github.com/resonaura/flopster)**: Software synthesizer (VST3, AU, Standalone) simulating retro floppy drive acoustics and mechanical stepping motors.
-
-<p align="center">
-  <img src="media/flopster.png" width="760" alt="Flopster Floppy Synth Plugin" />
-</p>
-
-- **[resobox-core](https://github.com/resonaura/resobox-core)** & **[resobox-ui](https://github.com/resonaura/resobox-ui)**: Low-latency audio processing DSP engine and interface built for a custom hardware guitar pedalboard.
-
-<p align="center">
-  <img src="media/resobox.jpg" width="460" alt="ResoBox Hardware Prototype" />
-</p>
-
-- **[shaitan-delay](https://github.com/resonaura/shaitan-delay)**: Stereo delay audio plugin (VST3) with adjustable tape saturation, feedback filtering, and tempo sync.
-
-<p align="center">
-  <img src="media/shaitan-delay.png" width="680" alt="Shaitan Delay VST3 Plugin" />
-</p>
-
-- **[owlydist](https://github.com/resonaura/owlydist)**: Audio distortion plugin (VST3) powered by the Elementary Audio DSP engine.
-
-<p align="center">
-  <img src="media/owlydist.png" width="760" alt="OwlyDist Elementary Audio Plugin" />
-</p>
-
-- **[foxled](https://github.com/resonaura/foxled)**: Ambient backlighting workstation with low-latency NAudio WASAPI loopback capture, real-time FFT spectrum analysis, and serial Adalight streaming.
-
-<p align="center">
-  <img src="media/foxled.jpg" width="680" alt="FoxLED Ambient Monitor Lighting" />
-</p>
-
----
-
-## Smart Home, Embedded & Edge Video Systems
-
-- **[scrypted-tuya](https://github.com/resonaura/scrypted-tuya)**: Standalone camera bridge interfacing with Tuya and Smart Life hardware, converting proprietary WebRTC streams into low-latency RTSP feeds without cloud dependencies.
-
-<p align="center">
-  <img src="media/scrypted-tuya.png" width="760" alt="Tuya Bridge Dashboard" />
-</p>
-
-- **[snappie](https://github.com/resonaura/snappie)**: Hardware-accelerated multi-camera RTSP snapshot server with zero-disk in-memory caching, supporting CUDA, VA-API, Intel QSV, and Apple VideoToolbox.
-- **[aqara-g5pro-mqtt](https://github.com/resonaura/aqara-g5pro-mqtt)**: Universal MQTT and RTSP integration bridge for Home Assistant featuring bidirectional two-way audio talkback.
-- **[nixie-clock-mqtt](https://github.com/resonaura/nixie-clock-mqtt)**: MQTT integration bridge for the Clocteck RGB Tube Clock, exposing lighting controls and digits to Home Assistant via auto-discovery.
-- **[foxyswitch](https://github.com/resonaura/foxyswitch)** & **[foxyhome](https://github.com/resonaura/foxyhome)**: Custom C++ / ESP32 firmware running on physical smart wall switches and connected domestic sensors.
-- **[ble-smart-light](https://github.com/resonaura/ble-smart-light)**: Reverse-engineered 10-byte BLE GATT protocol controller for Supra / Eboylight smart lamps on Windows 10 UWP and Android.
-
-<p align="center">
-  <img src="media/ble-smart-light.jpg" width="460" alt="BLE Smart Light Hardware Controller" />
-</p>
-
-- **[homebridge-sinricpro](https://github.com/resonaura/homebridge-sinricpro)**: Open-source contribution mapping SinricPro connected devices directly into Apple HomeKit via Homebridge.
-
----
-
-## Interactive & Web Applications
-
+### Interactive Web & Mobile
 - **[KidCanvas](https://kidcanvas.skrinkaznan.com/)**: Collaborative real-time digital canvas platform for children and educators. Features instantaneous multi-user stroke synchronization over WebSockets, HTML5 Canvas rendering, and clean drawing tools.
 
 <p align="center">
   <img src="media/kidcanvas.png" width="760" alt="KidCanvas Collaborative Canvas" />
 </p>
 
-- **[Personal Portfolio](https://github.com/resonaura/portfolio)** ([vynohradov.ca](https://vynohradov.ca)): Interactive personal portfolio website featuring custom Three.js GLSL fluid simulation shaders, iPadOS magnetic cursor physics, and responsive slide layouts.
+- **[Personal Portfolio](https://github.com/resonaura/portfolio)** ([vynohradov.ca](https://vynohradov.ca)): Interactive personal portfolio website featuring custom Three.js GLSL fluid simulation shaders and responsive layout transitions.
 - **Alchemy** ([portfolio](https://github.com/resonaura/portfolio)): Multi-model LLM workspace and Chrome extension interface coordinating prompt pipelines across OpenAI and Claude APIs.
 
 <p align="center">
@@ -197,8 +169,30 @@ Interactive audio patchbay coordinator translating complex stage cabling, pedalb
 
 ---
 
-## Windows Systems & Desktop Utilities
+## Tier 4: Systems Tooling, Embedded IoT & Automation
 
+- **[foxled](https://github.com/resonaura/foxled)**: Real-Time FFT Spectrum Analyzer & Serial Protocol Driver. Captures raw system audio via WASAPI loopback, performs real-time windowed FFT frequency binning, and serializes frame-synchronized multi-zone RGB payloads over UART to addressable LED strips.
+
+<p align="center">
+  <img src="media/foxled.jpg" width="680" alt="FoxLED Ambient Monitor Lighting" />
+</p>
+
+- **[ble-smart-light](https://github.com/resonaura/ble-smart-light)**: Bluetooth Low Energy Protocol Reverse Engineering. Sniffed, decompiled, and mapped proprietary 10-byte GATT write characteristics to produce a headless, deterministic device control daemon with zero cloud dependencies on Windows 10 UWP and Android.
+
+<p align="center">
+  <img src="media/ble-smart-light.jpg" width="460" alt="BLE Smart Light Hardware Controller" />
+</p>
+
+- **[foxyswitch](https://github.com/resonaura/foxyswitch)** & **[foxyhome](https://github.com/resonaura/foxyhome)**: Custom C++ / ESP32 firmware running on physical smart wall switches with hardware debouncing interrupts and domestic sensor meshes.
+- **[nixie-clock-mqtt](https://github.com/resonaura/nixie-clock-mqtt)**: MQTT integration bridge for the Clocteck RGB Tube Clock, exposing lighting controls and digits to Home Assistant via auto-discovery.
+- **[homebridge-sinricpro](https://github.com/resonaura/homebridge-sinricpro)**: Open-source contribution mapping SinricPro connected devices directly into Apple HomeKit via Homebridge.
+- **[gsync](https://github.com/resonaura/gsync)**: Interactive Terminal UI (TUI) for real-time bi-directional cloud synchronization with Google Drive, rsync, and rclone.
+
+<p align="center">
+  <img src="media/gsync.png" width="760" alt="GSync Terminal UI" />
+</p>
+
+- **[miku-renderer](https://github.com/resonaura/miku-renderer)**: Declarative Node.js and FFmpeg multi-track video composition engine with render queue management.
 - **[foxdock](https://github.com/resonaura/foxdock)**: Windows application dock featuring Fluent Acrylic design, shell integration, and background IPC daemon.
 
 <p align="center">
@@ -224,17 +218,6 @@ Interactive audio patchbay coordinator translating complex stage cabling, pedalb
   <img src="media/filerabbit.jpg" width="760" alt="FileRabbit Cloud Storage UI" />
 </p>
 
----
-
-## Infrastructure, Automation & Tooling
-
-- **[gsync](https://github.com/resonaura/gsync)**: Interactive Terminal UI (TUI) for real-time bi-directional cloud synchronization with Google Drive, rsync, and rclone.
-
-<p align="center">
-  <img src="media/gsync.png" width="760" alt="GSync Terminal UI" />
-</p>
-
-- **[miku-renderer](https://github.com/resonaura/miku-renderer)**: Declarative Node.js and FFmpeg multi-track video composition engine with render queue management.
 - **[resomd](https://github.com/resonaura/resomd)**: Live split-pane markdown editor with block-level scroll synchronization, cloud autosave, and headless PDF export.
 
 <p align="center">
@@ -250,7 +233,7 @@ Interactive audio patchbay coordinator translating complex stage cabling, pedalb
 
 ---
 
-## Origins: Where It All Started
+## Tier 5: Engineering Roots & Origins (GREENJIM STUDIOS, 2012–2014)
 
 Before building real-time audio engines and distributed AI backends, I started programming at age 12. At 14, together with friends, we founded indie team GREENJIM STUDIOS and built browser games in ActionScript and Adobe Flash.
 
