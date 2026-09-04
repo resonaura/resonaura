@@ -252,18 +252,29 @@ Interactive audio patchbay coordinator translating complex stage cabling, pedalb
 
 ## Origins: Where It All Started
 
+Before building real-time audio engines and distributed AI backends, I started programming at age 12. At 14, together with friends, we founded indie team GREENJIM STUDIOS and built browser games in ActionScript and Adobe Flash.
+
 ### Robohero vs Zombies
 *Retro 2D Flash Platformer & Shooter (Built at age 14)*  
 **Stack**: ActionScript, Adobe Flash, Vector Art, Ruffle (WASM)  
 **Repo**: [resonaura/robohero-vs-zombies](https://github.com/resonaura/robohero-vs-zombies) • [Play in Browser](https://resonaura.github.io/robohero-vs-zombies/)
 
-Before building real-time audio engines and distributed AI backends, I started programming at age 12. At 14, together with friends, we founded indie team GREENJIM STUDIOS and built *Robohero vs Zombies* (a multi-level 2D action platformer featuring custom physics, ammo management, coin drops, and locked progression tiers).
+Multi-level 2D action platformer featuring custom physics, ammo management, coin drops, and locked progression tiers. When the unversioned project files corrupted during development, the original FLA source was lost. Rather than quitting, we started over from scratch with a revamped neon interface. That harsh lesson sparked an enduring obsession with version control, redundant backups, and defensive system architecture. Both milestones survive as compiled SWF binaries, playable in modern browsers via WebAssembly.
 
 <p align="center">
   <img src="media/robohero-gameplay.png" width="760" alt="Robohero vs Zombies Gameplay" />
 </p>
 
-When the unversioned project files corrupted during development, the original FLA source was lost. Rather than quitting, we started over from scratch with a revamped neon interface. That harsh lesson sparked an enduring obsession with version control, redundant backups, and defensive system architecture. Both milestones survive as compiled SWF binaries, playable in modern browsers via WebAssembly.
+### Blood Battle
+*Side-Scrolling Space Shooter (Built 2012–2014)*  
+**Stack**: ActionScript, Adobe Flash, Vector Art, Ruffle (WASM)  
+**Repo**: [resonaura/blood-battle](https://github.com/resonaura/blood-battle) • [Play in Browser](https://resonaura.github.io/blood-battle/)
+
+2D horizontal space combat simulator featuring multi-angle squadron intercepts, projectile ballistics, shield depletion mechanics, and an integrated cockpit HUD with telemetry readouts and callsigns. Recovered from a legacy standalone projector binary and restored for in-browser emulation.
+
+<p align="center">
+  <img src="media/blood-battle-gameplay.png" width="760" alt="Blood Battle Gameplay" />
+</p>
 
 ---
 
