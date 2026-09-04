@@ -1,7 +1,7 @@
 # Andrii Vynohradov
 
 **Systems Architect & Lead Backend Engineer**  
-Victoria, BC, Canada • [vynohradov.ca](https://vynohradov.ca) • [LinkedIn](https://linkedin.com/in/resonaura) • [Email](mailto:andrii.vynohradov@gmail.com) • [Credentials](https://certificates.vynohradov.ca)
+Victoria, BC, Canada • [vynohradov.ca](https://vynohradov.ca) • [LinkedIn](https://linkedin.com/in/resonaura) • [Email](mailto:andrii.vynohradov@gmail.com) • [CV (PDF)](cv.pdf) • [Credentials](https://certificates.vynohradov.ca)
 
 [![C++](https://img.shields.io/badge/C%2B%2B-20-00599C.svg?style=flat-square&logo=c%2B%2B&logoColor=white)](#)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6.svg?style=flat-square&logo=typescript&logoColor=white)](#)
@@ -122,4 +122,4 @@ High-performance video streaming bridges designed for local smart home networks 
 
 - **Fachinformatiker für Anwendungsentwicklung** (IHK-Certified Dual Vocational Program, Germany) — Completed ahead of schedule with honors; evaluated by WES as equivalent to a Canadian Applied Computer Science Diploma.
 - **Undergraduate Studies in Computer Science & Engineering** (Prydniprovska State Academy of Civil Engineering and Architecture, Ukraine) — 2 years of full-time coursework in Data Structures, Algorithms, and Software Engineering.
-- **Certifications**: [View verified credentials](https://certificates.vynohradov.ca).
+- **Certifications & Credentials**: [View verified certificates](https://certificates.vynohradov.ca) • [Download CV (PDF)](cv.pdf)
