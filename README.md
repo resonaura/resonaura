@@ -8,6 +8,7 @@ Victoria, BC, Canada • [vynohradov.ca](https://vynohradov.ca) • [LinkedIn](h
 [![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg?style=flat-square&logo=python&logoColor=white)](#)
 [![C#](https://img.shields.io/badge/C%23-.NET%208%20%7C%204.7.2-239120.svg?style=flat-square&logo=csharp&logoColor=white)](#)
 [![Node.js](https://img.shields.io/badge/Node.js-20%2B-339933.svg?style=flat-square&logo=nodedotjs&logoColor=white)](#)
+[![WebAssembly](https://img.shields.io/badge/WASM-libavoid-654FF0.svg?style=flat-square&logo=webassembly&logoColor=white)](#)
 [![JUCE](https://img.shields.io/badge/Audio%20Framework-JUCE%209-black.svg?style=flat-square)](#)
 [![Lighting](https://img.shields.io/badge/Lighting-DMX512%20%7C%20Art--Net%20%7C%20sACN-F7931E.svg?style=flat-square)](#)
 [![Protocols](https://img.shields.io/badge/Protocols-MIDI%20%7C%20WebSockets%20%7C%20RTSP%20%7C%20WebRTC-4B0082.svg?style=flat-square)](#)
@@ -41,6 +42,22 @@ A live performance workstation designed for zero-dropout multitrack playback syn
 - **Process Supervisor (Kaishaku)**: A native daemon monitors application processes over local IPC heartbeat channels. If the Electron UI crashes during a live show, the audio engine continues running uninterrupted while the supervisor relaunches the interface within 300 milliseconds.
 - **Stage Lighting Engine**: Generates 60 Hz fixture control packets across DMX-512, Art-Net, and sACN (ANSI E1.31) over UDP, alongside a custom binary protocol driving networked ESP32 microcontrollers.
 - **3D Visualizer**: Real-time WebGL stage visualizer in Three.js rendering moving heads, trusses, and beam geometry at 60 FPS.
+
+### ResoPatch
+*Interactive Stage Routing Graph & Technical Rider Generator*  
+**Stack**: React 19, TypeScript 5.9, @xyflow/react, libavoid-js (WASM), HeroUI v3, NestJS 11, Fastify, SQLite, Puppeteer  
+**Repo**: [resonaura/resopatch](https://github.com/resonaura/resopatch)
+
+Interactive audio patchbay coordinator translating complex stage cabling, pedalboards, audio interfaces, and electrical distribution into a validated visual node graph.
+
+<p align="center">
+  <img src="media/resopatch.png" width="760" alt="ResoPatch Stage Routing Canvas" />
+</p>
+
+- **WASM Obstacle Avoidance Routing**: Integrates libavoid compiled to WebAssembly inside an isolated Web Worker to compute dynamic orthogonal cable trajectories that navigate around hardware equipment footprints.
+- **Physical Boundary Validation**: Enforces signal compatibility across balanced line level, microphone signals, high-Z instrument inputs, and isolated DC pedalboard rails.
+- **Automated Technical Rider Generation**: Evaluates stage box topology to compile FOH channel assignment charts, backline requirements, and packing checklists into printable A4 PDFs via headless Puppeteer.
+- **Real-Time Collaboration**: Propagates patch updates and mute states between stage crew and FOH engineers during soundchecks over low-latency Socket.IO channels.
 
 ### Indago AI Platform & Multi-Agent Runtime
 *Lead AI Platform Engineer & Systems Architect (IndagoDev)*  
