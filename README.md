@@ -250,6 +250,23 @@ Interactive audio patchbay coordinator translating complex stage cabling, pedalb
 
 ---
 
+## Origins: Where It All Started
+
+### Robohero vs Zombies
+*Retro 2D Flash Platformer & Shooter (Built at age 14)*  
+**Stack**: ActionScript, Adobe Flash, Vector Art, Ruffle (WASM)  
+**Repo**: [resonaura/robohero-vs-zombies](https://github.com/resonaura/robohero-vs-zombies) • [Play in Browser](https://resonaura.github.io/robohero-vs-zombies/)
+
+Before building real-time audio engines and distributed AI backends, I started programming at age 12. At 14, together with friends, we founded indie team GREENJIM STUDIOS and built *Robohero vs Zombies* (a multi-level 2D action platformer featuring custom physics, ammo management, coin drops, and locked progression tiers).
+
+<p align="center">
+  <img src="media/robohero-gameplay.png" width="760" alt="Robohero vs Zombies Gameplay" />
+</p>
+
+When the unversioned project files corrupted during development, the original FLA source was lost. That harsh lesson sparked an enduring obsession with version control, redundant backups, and defensive system architecture. The compiled SWF binaries survived and remain playable in modern browsers via WebAssembly.
+
+---
+
 ## Technical Competencies
 
 - **Systems & Low-Latency**: C++20, JUCE 9, Lock-Free Concurrency, Zero-Allocation Real-Time Audio, DSP, Sinc Resampling, DMX-512, Art-Net, sACN (E1.31), MIDI, ESP32 UDP.
