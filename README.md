@@ -3,6 +3,23 @@
 **Systems Architect & Lead Backend Engineer**  
 Victoria, BC, Canada • [vynohradov.ca](https://vynohradov.ca) • [LinkedIn](https://linkedin.com/in/resonaura) • [Email](mailto:andrii.vynohradov@gmail.com) • [Credentials](https://certificates.vynohradov.ca)
 
+[![C++](https://img.shields.io/badge/C%2B%2B-20-00599C.svg?style=flat-square&logo=c%2B%2B&logoColor=white)](#)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6.svg?style=flat-square&logo=typescript&logoColor=white)](#)
+[![Python](https://img.shields.io/badge/Python-3.11%2B-3776AB.svg?style=flat-square&logo=python&logoColor=white)](#)
+[![C#](https://img.shields.io/badge/C%23-.NET%208%20%7C%204.7.2-239120.svg?style=flat-square&logo=csharp&logoColor=white)](#)
+[![Node.js](https://img.shields.io/badge/Node.js-20%2B-339933.svg?style=flat-square&logo=nodedotjs&logoColor=white)](#)
+[![JUCE](https://img.shields.io/badge/Audio%20Framework-JUCE%209-black.svg?style=flat-square)](#)
+[![Lighting](https://img.shields.io/badge/Lighting-DMX512%20%7C%20Art--Net%20%7C%20sACN-F7931E.svg?style=flat-square)](#)
+[![Protocols](https://img.shields.io/badge/Protocols-MIDI%20%7C%20WebSockets%20%7C%20RTSP%20%7C%20WebRTC-4B0082.svg?style=flat-square)](#)
+[![Backend](https://img.shields.io/badge/Backend-NestJS%20%7C%20FastAPI-E0234E.svg?style=flat-square&logo=nestjs&logoColor=white)](#)
+[![Database](https://img.shields.io/badge/Database-PostgreSQL%20%7C%20pgvector-4169E1.svg?style=flat-square&logo=postgresql&logoColor=white)](#)
+[![Cache](https://img.shields.io/badge/Cache-Redis%20%7C%20BullMQ-DC382D.svg?style=flat-square&logo=redis&logoColor=white)](#)
+[![Storage](https://img.shields.io/badge/Storage-MinIO%20S3-C72C48.svg?style=flat-square&logo=minio&logoColor=white)](#)
+[![Infra](https://img.shields.io/badge/Infra-Docker%20%7C%20Ubuntu%20Bare--Metal-2496ED.svg?style=flat-square&logo=docker&logoColor=white)](#)
+[![Frontend](https://img.shields.io/badge/Frontend-React%2019%20%7C%20Next.js-61DAFB.svg?style=flat-square&logo=react&logoColor=black)](#)
+[![Graphics](https://img.shields.io/badge/Graphics-Three.js%20(WebGL)-049EF4.svg?style=flat-square&logo=threedotjs&logoColor=white)](#)
+[![Desktop](https://img.shields.io/badge/Desktop-Electron%20%7C%20WPF-47848F.svg?style=flat-square&logo=electron&logoColor=white)](#)
+
 I build low-latency real-time systems in C++, distributed backend architectures, and production AI agent runtimes. My background spans real-time digital signal processing, lock-free concurrency, high-throughput video streaming, and hardware automation protocols.
 
 ---
@@ -33,13 +50,31 @@ Architected the distributed infrastructure for multi-step autonomous agent execu
 - Implemented real-time WebSocket telemetry streaming with sub-100ms client updates for active user sessions.
 - Provisioned sandboxed container execution environments with automated health checks and self-healing worker pools.
 
+### Autonomous Agent Runtime & Visual Stream
+*AI Agent Operating Infrastructure & Activity Feed (Private Codebase)*  
+**Stack**: Node.js, TypeScript, Docker, WebSockets, Redis, IPC RPC, React
+
+Execution runtime and distributed coordination layer for independent autonomous AI agents.
+
+- Built an execution engine with process isolation, daemon RPC connection pooling, and stale socket eviction.
+- Developed a visual activity feed where autonomous agents publish execution checkpoints, generated artifacts, media snippets, and quote interactions in real time.
+- Implemented containerized sandboxes with resource quota enforcement and dynamic work scheduling.
+
+### RSNRA Music Ecosystem & Interactive Web
+*Streaming Infrastructure, Digital Identity & Creative Homages*  
+**Stack**: React 18, TypeScript, Tailwind CSS, Web Audio API, OAuth 2.0 / SSO, WebSockets
+
+- **[rsnra.link](https://rsnra.link)** (repo: [rsnra-link](https://github.com/resonaura/rsnra-link)): Hybrid music ecosystem combining direct high-fidelity audio streaming, interactive band storytelling, and unified smart links connecting fans to major platforms.
+- **[rsnra.art](https://rsnra.art)** (repo: [rsnra-art](https://github.com/resonaura/rsnra-art)): Interactive digital desktop rebuilt as a fully functional, draggable, minimizable tribute to Windows 95, featuring custom window managers, retro audio design, and a playable media player.
+- **[rsnra-auth](https://github.com/resonaura/rsnra-auth)**: Central identity provider handling OAuth single sign-on (SSO), token validation, and profile sessions across all RSNRA web services.
+
 ### Scrypted Tuya & Edge Video Systems
 *High-Throughput Camera Bridge & Video Relays*  
 **Stack**: C++, Node.js, NestJS, HeroUI, RTSP, WebRTC, H.264, FFmpeg, MQTT
 
 High-performance video streaming bridges designed for local smart home networks and Home Assistant environments.
 
-- **[scrypted-tuya](https://github.com/resonaura/scrypted-tuya)**: Standalone camera bridge that interfaces with Tuya and Smart Life hardware, converting proprietary WebRTC video streams into low-latency RTSP feeds without cloud dependencies.
+- **[scrypted-tuya](https://github.com/resonaura/scrypted-tuya)**: Standalone camera bridge interfacing with Tuya and Smart Life hardware, converting proprietary WebRTC streams into low-latency RTSP feeds without cloud dependencies.
 - **[snappie](https://github.com/resonaura/snappie)**: Hardware-accelerated multi-camera RTSP snapshot server with zero-disk in-memory caching, supporting CUDA, VA-API, Intel QSV, and Apple VideoToolbox.
 - **[aqara-g5pro-mqtt](https://github.com/resonaura/aqara-g5pro-mqtt)**: Universal MQTT and RTSP integration bridge for Home Assistant featuring bidirectional two-way audio talkback.
 
@@ -49,18 +84,28 @@ High-performance video streaming bridges designed for local smart home networks 
 
 - **[scratcher](https://github.com/resonaura/scratcher)**: Dual-deck vinyl scratch emulator audio plugin and standalone instrument built with JUCE 8 and C++17, featuring realistic turntable physics, time-stretching, and MIDI control surface mapping.
 - **[flopster](https://github.com/resonaura/flopster)**: Software synthesizer (VST3, AU, Standalone) simulating retro floppy drive acoustics and mechanical stepping motors.
-- **[resobox-core](https://github.com/resonaura/resobox-core)**: Low-latency audio processing firmware and engine built for a custom hardware guitar pedalboard.
+- **[resobox-core](https://github.com/resonaura/resobox-core)** & **[resobox-ui](https://github.com/resonaura/resobox-ui)**: Low-latency audio processing DSP engine and interface built for a custom hardware guitar pedalboard.
+- **[owlydist](https://github.com/resonaura/owlydist)**: Creative audio distortion plugin (VST3) powered by the Elementary Audio DSP engine.
 - **[foxled](https://github.com/resonaura/foxled)**: Ambient backlighting workstation with low-latency NAudio WASAPI loopback capture, real-time FFT spectrum analysis, and serial Adalight streaming.
+
+### Systems Utilities & Tooling
+*Developer Productivity & Media Engineering*  
+**Stack**: Go, Node.js, C#, Shell, FFmpeg, Win32 APIs
+
+- **[gsync](https://github.com/resonaura/gsync)**: Interactive Terminal UI (TUI) for real-time bi-directional cloud synchronization with Google Drive, rsync, and rclone, featuring live transfer rate meters.
+- **[miku-renderer](https://github.com/resonaura/miku-renderer)**: Declarative Node.js and FFmpeg multi-track video composition engine with render queue management.
+- **[resomd](https://github.com/resonaura/resomd)**: Live split-pane markdown editor with block-level scroll synchronization, cloud autosave, and headless PDF export.
+- **[foxdock](https://github.com/resonaura/foxdock)**: Windows application dock featuring Fluent Acrylic design, shell integration, and background IPC daemon.
 
 ---
 
 ## Interactive & Web Applications
 
 - **[KidCanvas](https://kidcanvas.skrinkaznan.com/)**: Collaborative real-time digital canvas platform for children and educators. Features instantaneous multi-user stroke synchronization over WebSockets, HTML5 Canvas rendering, and clean drawing tools.
+- **[Personal Portfolio](https://github.com/resonaura/portfolio)** ([vynohradov.ca](https://vynohradov.ca)): Interactive showcase website featuring custom Three.js GLSL fluid simulation shaders, iPadOS magnetic cursor physics, and responsive slide layouts.
+- **[maria-portfolio](https://github.com/resonaura/maria-portfolio)**: Designer portfolio SPA with a custom NestJS / Fastify / Sharp image transformation engine and dynamic luminance mapping.
 - **Alchemy** ([portfolio](https://github.com/resonaura/portfolio)): Multi-model LLM workspace and Chrome extension interface coordinating prompt pipelines across OpenAI and Claude APIs.
 - **UniVent** ([portfolio](https://github.com/resonaura/portfolio)): Cross-platform mobile event discovery application built with React Native, TypeScript, and native bridge modules for iOS and Android.
-- **[Personal Portfolio](https://github.com/resonaura/portfolio)** ([vynohradov.ca](https://vynohradov.ca)): Interactive showcase website featuring custom Three.js GLSL fluid simulation shaders, iPadOS magnetic cursor physics, and responsive slide layouts.
-- **[ResoMD](https://github.com/resonaura/resomd)**: Live split-pane markdown editor with block-level scroll synchronization, cloud autosave, and headless PDF export.
 
 ---
 
