@@ -66,27 +66,18 @@ Real-time live performance workstation designed for deterministic zero-dropout m
 
 ## Tier 2: Distributed Platforms, AI Agent Runtimes & Media Streaming
 
-### Indago AI Platform & Multi-Agent Runtime
-*Lead AI Platform Engineer & Systems Architect (IndagoDev)*  
-**Stack**: Node.js, NestJS, Python (FastAPI), vLLM, Ollama, LangGraph, Redis, PostgreSQL, MinIO, Docker
+### Enterprise AI Systems & Autonomous Agent Infrastructure
+*Systems Architect & Lead Backend (IndagoDev, 2024–2026)*  
+**Stack**: Node.js, NestJS, TypeScript, Python (FastAPI), TypeORM, Docker, Redis Streams, PostgreSQL, MinIO, WireGuard, WebSockets, FFmpeg
 
-Distributed infrastructure and execution runtime for multi-step autonomous agent execution and local LLM inference.
+Architected and scaled the core distributed infrastructure powering IndagoDev's multi-project AI ecosystem across autonomous agent orchestration, sandboxed execution, and declarative media rendering:
 
-- Decomposed a legacy monolithic backend into event-driven NestJS microservices with backpressure management, supporting 1,000+ parallel AI agents while cutting p95 gateway latency from 450ms to 315ms under high concurrency.
-- Built a production Hybrid RAG pipeline combining pgvector similarity search with structured metadata pre-filtering, reducing token overhead by ~40%.
-- Deployed a distributed bare-metal MinIO S3 storage cluster on Linux servers, eliminating 70% of cloud data storage and egress expenses.
-- Implemented real-time WebSocket telemetry streaming with sub-100ms client updates for active user sessions.
-- Provisioned sandboxed container execution environments with automated health checks, memory limits, and self-healing worker pools.
-
-### Autonomous Agent Runtime & Visual Stream
-*AI Agent Operating Infrastructure & Activity Feed (Private Codebase)*  
-**Stack**: Node.js, TypeScript, Docker, WebSockets, Redis, IPC RPC, React
-
-Execution runtime and distributed coordination layer for independent autonomous AI agents.
-
-- Built an execution engine featuring process isolation, daemon RPC connection pooling, and stale socket eviction.
-- Developed a visual activity feed where autonomous agents publish execution checkpoints, generated artifacts, media snippets, and quote interactions in real time.
-- Implemented containerized sandboxes with resource quota enforcement and dynamic work scheduling.
+- **Alchemy (Public Showcase)**: Multi-model prompt studio and browser extension streaming low-latency responses across OpenAI, Anthropic, and local Ollama runtimes.
+- **Autonomous Agent Operating System & Computer Use (Commercial)**: Distributed execution runtime and VM management layer powering autonomous multi-step agent workflows, text/media synthesis, automated social distribution, and Computer Use desktop/OS interaction.
+- **High-Density Agent Cloud Hosting & Mesh Infrastructure (Commercial)**: Scaled hosting platform for autonomous Nous Research Hermes and OpenClaw agents featuring dynamic cloud VPS provisioning across Hetzner & Vultr, WireGuard mesh VPN tunnels, WebSocket daemon IPC (`/v3/agents/:serverId`), and self-healing reconciliation loops (`AgentHealthService` pinging every 60s and healing on failure).
+- **Autonomous Agent Social Network (Commercial)**: Real-time event-driven social interaction layer enabling autonomous AI agents to broadcast checkpoints, discuss artifacts, and interact programmatically over WebSocket streams.
+- **AI Media Generation Platform & Declarative Video Engine (Commercial)**: AI image/video generation studio with an integrated timeline editor powered by custom declarative FFmpeg rendering engine pipelines (`miku-renderer`).
+- **Distributed MinIO S3 & Event Loops**: Replaced expensive cloud storage with self-hosted bare-metal MinIO S3 clusters, cutting 70% of storage expenses while maintaining sub-100ms real-time event distribution via Redis Streams.
 
 ### Edge Video Ingestion & Hardware Transcoding
 - **[scrypted-tuya](https://github.com/resonaura/scrypted-tuya)**: Low-Latency Edge Video Ingestion Pipeline. Standalone camera bridge interfacing directly with Tuya hardware, demuxing proprietary WebRTC feeds into standard sub-second RTSP relays with zero-copy packet forwarding and no cloud dependencies.
@@ -142,20 +133,20 @@ Interactive audio patchbay coordinator translating complex stage cabling, pedalb
 </p>
 
 ### Interactive Web & Mobile
-- **[KidCanvas](https://kidcanvas.skrinkaznan.com/)**: Collaborative real-time digital canvas platform for children and educators. Features instantaneous multi-user stroke synchronization over WebSockets, HTML5 Canvas rendering, and clean drawing tools.
+- **[KidCanvas](https://kidcanvas.skrinkaznan.com/)**: Collaborative real-time digital canvas platform developed at IndagoDev for children and educators. Features instantaneous multi-user stroke synchronization over WebSockets, HTML5 Canvas rendering, and clean drawing tools.
 
 <p align="center">
   <img src="media/kidcanvas.png" width="760" alt="KidCanvas Collaborative Canvas" />
 </p>
 
 - **[Personal Portfolio](https://github.com/resonaura/portfolio)** ([vynohradov.ca](https://vynohradov.ca)): Interactive personal portfolio website featuring custom Three.js GLSL fluid simulation shaders and responsive layout transitions.
-- **Alchemy** ([portfolio](https://github.com/resonaura/portfolio)): Multi-model LLM workspace and Chrome extension interface coordinating prompt pipelines across OpenAI and Claude APIs.
+- **Alchemy** ([portfolio](https://github.com/resonaura/portfolio)): Multi-model LLM workspace and Chrome extension interface coordinating prompt pipelines across OpenAI and Claude APIs (IndagoDev).
 
 <p align="center">
   <img src="media/alchemy.png" width="760" alt="Alchemy AI Workspace" />
 </p>
 
-- **UniVent** ([portfolio](https://github.com/resonaura/portfolio)): Cross-platform mobile event discovery application built with React Native, TypeScript, and native bridge modules for iOS and Android.
+- **UniVent** ([portfolio](https://github.com/resonaura/portfolio)): Cross-platform mobile event discovery application developed at IndagoDev, built with React Native, TypeScript, and native bridge modules for iOS and Android.
 
 <p align="center">
   <img src="media/univent.png" width="760" alt="UniVent Mobile App" />
