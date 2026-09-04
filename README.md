@@ -67,45 +67,64 @@ Execution runtime and distributed coordination layer for independent autonomous 
 - **[rsnra.link](https://rsnra.link)** (repo: [rsnra-link](https://github.com/resonaura/rsnra-link)): Hybrid music ecosystem combining direct high-fidelity audio streaming, interactive band storytelling, and unified smart links connecting fans to major platforms.
 - **[rsnra.art](https://rsnra.art)** (repo: [rsnra-art](https://github.com/resonaura/rsnra-art)): Interactive digital desktop rebuilt as a fully functional, draggable, minimizable tribute to Windows 95, featuring custom window managers, retro audio design, and a playable media player.
 - **[rsnra-auth](https://github.com/resonaura/rsnra-auth)**: Central identity provider handling OAuth single sign-on (SSO), token validation, and profile sessions across all RSNRA web services.
+- **[authorplay](https://github.com/resonaura/authorplay)**: Standalone web streaming platform for independent musicians, serving as the direct architectural predecessor to rsnra.link.
 
-### Scrypted Tuya & Edge Video Systems
-*High-Throughput Camera Bridge & Video Relays*  
-**Stack**: C++, Node.js, NestJS, HeroUI, RTSP, WebRTC, H.264, FFmpeg, MQTT
+---
 
-High-performance video streaming bridges designed for local smart home networks and Home Assistant environments.
+## Audio DSP Plugins & Hardware Instruments
+
+- **[scratcher](https://github.com/resonaura/scratcher)**: Dual-deck vinyl scratch emulator audio plugin and standalone instrument built with JUCE 8 and C++17. Features realistic turntable physics, time-stretching, and MIDI control surface mapping.
+- **[flopster](https://github.com/resonaura/flopster)**: Software synthesizer (VST3, AU, Standalone) simulating retro floppy drive acoustics and mechanical stepping motors.
+- **[shaitan-delay](https://github.com/resonaura/shaitan-delay)**: Stereo delay audio plugin (VST3) with adjustable tape saturation, feedback filtering, and tempo sync.
+- **[owlydist](https://github.com/resonaura/owlydist)**: Audio distortion plugin (VST3) powered by the Elementary Audio DSP engine.
+- **[resobox-core](https://github.com/resonaura/resobox-core)** & **[resobox-ui](https://github.com/resonaura/resobox-ui)**: Low-latency audio processing DSP engine and interface built for a custom hardware guitar pedalboard.
+- **[foxled](https://github.com/resonaura/foxled)**: Ambient backlighting workstation with low-latency NAudio WASAPI loopback capture, real-time FFT spectrum analysis, and serial Adalight streaming.
+
+---
+
+## Smart Home, Embedded & Edge Video Systems
 
 - **[scrypted-tuya](https://github.com/resonaura/scrypted-tuya)**: Standalone camera bridge interfacing with Tuya and Smart Life hardware, converting proprietary WebRTC streams into low-latency RTSP feeds without cloud dependencies.
 - **[snappie](https://github.com/resonaura/snappie)**: Hardware-accelerated multi-camera RTSP snapshot server with zero-disk in-memory caching, supporting CUDA, VA-API, Intel QSV, and Apple VideoToolbox.
 - **[aqara-g5pro-mqtt](https://github.com/resonaura/aqara-g5pro-mqtt)**: Universal MQTT and RTSP integration bridge for Home Assistant featuring bidirectional two-way audio talkback.
+- **[nixie-clock-mqtt](https://github.com/resonaura/nixie-clock-mqtt)**: MQTT integration bridge for the Clocteck RGB Tube Clock, exposing lighting controls and digits to Home Assistant via auto-discovery.
+- **[foxyswitch](https://github.com/resonaura/foxyswitch)** & **[foxyhome](https://github.com/resonaura/foxyhome)**: Custom C++ / ESP32 firmware running on physical smart wall switches and connected domestic sensors.
+- **[ble-smart-light](https://github.com/resonaura/ble-smart-light)**: Reverse-engineered 10-byte BLE GATT protocol controller for Supra / Eboylight smart lamps on Windows 10 UWP and Android.
+- **[homebridge-sinricpro](https://github.com/resonaura/homebridge-sinricpro)**: Open-source contribution mapping SinricPro connected devices directly into Apple HomeKit via Homebridge.
 
-### Audio DSP Plugins & Hardware Instruments
-*Real-Time Signal Processing & VST/AU Instruments*  
-**Stack**: C++17/20, JUCE Framework, Elementary Audio, SIMD, Win32/macOS Audio APIs
+---
 
-- **[scratcher](https://github.com/resonaura/scratcher)**: Dual-deck vinyl scratch emulator audio plugin and standalone instrument built with JUCE 8 and C++17, featuring realistic turntable physics, time-stretching, and MIDI control surface mapping.
-- **[flopster](https://github.com/resonaura/flopster)**: Software synthesizer (VST3, AU, Standalone) simulating retro floppy drive acoustics and mechanical stepping motors.
-- **[resobox-core](https://github.com/resonaura/resobox-core)** & **[resobox-ui](https://github.com/resonaura/resobox-ui)**: Low-latency audio processing DSP engine and interface built for a custom hardware guitar pedalboard.
-- **[owlydist](https://github.com/resonaura/owlydist)**: Creative audio distortion plugin (VST3) powered by the Elementary Audio DSP engine.
-- **[foxled](https://github.com/resonaura/foxled)**: Ambient backlighting workstation with low-latency NAudio WASAPI loopback capture, real-time FFT spectrum analysis, and serial Adalight streaming.
+## Windows Systems & Desktop Utilities
 
-### Systems Utilities & Tooling
-*Developer Productivity & Media Engineering*  
-**Stack**: Go, Node.js, C#, Shell, FFmpeg, Win32 APIs
-
-- **[gsync](https://github.com/resonaura/gsync)**: Interactive Terminal UI (TUI) for real-time bi-directional cloud synchronization with Google Drive, rsync, and rclone, featuring live transfer rate meters.
-- **[miku-renderer](https://github.com/resonaura/miku-renderer)**: Declarative Node.js and FFmpeg multi-track video composition engine with render queue management.
-- **[resomd](https://github.com/resonaura/resomd)**: Live split-pane markdown editor with block-level scroll synchronization, cloud autosave, and headless PDF export.
+- **[apps-indexator](https://github.com/resonaura/apps-indexator)**: High-speed Windows application indexer and icon extractor using direct Win32, Shell32, and GDI32 system calls.
 - **[foxdock](https://github.com/resonaura/foxdock)**: Windows application dock featuring Fluent Acrylic design, shell integration, and background IPC daemon.
+- **[ktulhu-server](https://github.com/resonaura/ktulhu-server)**: Home server manager with Acrylic WPF dashboard, OpenHardwareMonitor telemetry, ngrok tunnel coordinator, and Telegram webhooks.
+- **[isekai-sub-tool](https://github.com/resonaura/isekai-sub-tool)**: Production dialogue and subtitle timing software built for The Walking Dead fan dubbing project.
+- **[filerabbit](https://github.com/resonaura/filerabbit)**: Cloud file storage and sharing web application built on ASP.NET Core and Entity Framework Core.
+
+---
+
+## Infrastructure, Automation & Community Bots
+
+- **[gsync](https://github.com/resonaura/gsync)**: Interactive Terminal UI (TUI) for real-time bi-directional cloud synchronization with Google Drive, rsync, and rclone.
+- **[miku-renderer](https://github.com/resonaura/miku-renderer)**: Declarative Node.js and FFmpeg multi-track video composition engine with render queue management.
+- **[rocket-alert-monitor](https://github.com/resonaura/rocket-alert-monitor)**: Real-time emergency siren and missile alert monitoring service with push notification dispatch.
+- **[resomd](https://github.com/resonaura/resomd)**: Live split-pane markdown editor with block-level scroll synchronization, cloud autosave, and headless PDF export.
+- **[bottogram](https://github.com/resonaura/bottogram)**: PHP 8 Telegram bot framework with an integrated administrative interface and conversion funnels.
+- **[foxy-mvc](https://github.com/resonaura/foxy-mvc)**: Lightweight PHP 8 MVC framework optimized for shared hosting environments.
+- **[webpack-unicode-plugin](https://github.com/resonaura/webpack-unicode-plugin)**: Webpack compiler plugin preventing Unicode character corruption in bundled production assets.
+- **vagachat-bot & vagakeeper** *(Private)*: Community protection, anti-spam, and member verification bots built for musician and blogger Vaganych's Telegram community.
 
 ---
 
 ## Interactive & Web Applications
 
 - **[KidCanvas](https://kidcanvas.skrinkaznan.com/)**: Collaborative real-time digital canvas platform for children and educators. Features instantaneous multi-user stroke synchronization over WebSockets, HTML5 Canvas rendering, and clean drawing tools.
-- **[Personal Portfolio](https://github.com/resonaura/portfolio)** ([vynohradov.ca](https://vynohradov.ca)): Interactive showcase website featuring custom Three.js GLSL fluid simulation shaders, iPadOS magnetic cursor physics, and responsive slide layouts.
+- **[Personal Portfolio](https://github.com/resonaura/portfolio)** ([vynohradov.ca](https://vynohradov.ca)): Interactive personal portfolio website featuring custom Three.js GLSL fluid simulation shaders, iPadOS magnetic cursor physics, and responsive slide layouts.
 - **[maria-portfolio](https://github.com/resonaura/maria-portfolio)**: Designer portfolio SPA with a custom NestJS / Fastify / Sharp image transformation engine and dynamic luminance mapping.
 - **Alchemy** ([portfolio](https://github.com/resonaura/portfolio)): Multi-model LLM workspace and Chrome extension interface coordinating prompt pipelines across OpenAI and Claude APIs.
 - **UniVent** ([portfolio](https://github.com/resonaura/portfolio)): Cross-platform mobile event discovery application built with React Native, TypeScript, and native bridge modules for iOS and Android.
+- **[noir-chrome-theme](https://github.com/resonaura/noir-chrome-theme)**: Minimalist deep black theme for Google Chrome.
 
 ---
 
@@ -120,6 +139,6 @@ High-performance video streaming bridges designed for local smart home networks 
 
 ## Education & Credentials
 
-- **Fachinformatiker für Anwendungsentwicklung** (IHK-Certified Dual Vocational Program, Germany) — Completed ahead of schedule with honors; evaluated by WES as equivalent to a Canadian Applied Computer Science Diploma.
+- **Fachinformatiker für Anwendungsentwicklung** (IHK-Certified Dual Vocational Program, Germany) (completed ahead of schedule with honors); evaluated by WES as equivalent to a Canadian Applied Computer Science Diploma.
 - **Undergraduate Studies in Computer Science & Engineering** (Prydniprovska State Academy of Civil Engineering and Architecture, Ukraine) — 2 years of full-time coursework in Data Structures, Algorithms, and Software Engineering.
 - **Certifications & Credentials**: [View verified certificates](https://certificates.vynohradov.ca) • [Download CV (PDF)](cv.pdf)
