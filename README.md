@@ -64,7 +64,7 @@ Execution runtime and distributed coordination layer for independent autonomous 
 *Streaming Infrastructure, Digital Identity & Creative Homages*  
 **Stack**: React 18, TypeScript, Tailwind CSS, Web Audio API, OAuth 2.0 / SSO, WebSockets
 
-- **[rsnra.link](https://rsnra.link)** (repo: [rsnra-link](https://github.com/resonaura/rsnra-link)): Hybrid music ecosystem combining direct high-fidelity audio streaming, interactive band storytelling, and unified smart links connecting fans to major platforms.
+- **[rsnra.link](https://rsnra.link)** (private repository: [rsnra-link](https://github.com/resonaura/rsnra-link)): Hybrid music ecosystem combining direct high-fidelity audio streaming, interactive band storytelling, and unified smart links connecting fans to major platforms.
 - **[rsnra.art](https://rsnra.art)** (repo: [rsnra-art](https://github.com/resonaura/rsnra-art)): Interactive digital desktop rebuilt as a fully functional, draggable, minimizable tribute to Windows 95, featuring custom window managers, retro audio design, and a playable media player.
 - **[rsnra-auth](https://github.com/resonaura/rsnra-auth)**: Central identity provider handling OAuth single sign-on (SSO), token validation, and profile sessions across all RSNRA web services.
 - **[authorplay](https://github.com/resonaura/authorplay)**: Standalone web streaming platform for independent musicians, serving as the direct architectural predecessor to rsnra.link.
