@@ -1,7 +1,7 @@
 # Andrii Vynohradov
 
 **Systems Architect & Lead Backend Engineer**  
-Victoria, BC, Canada • [vynohradov.ca](https://vynohradov.ca) • [LinkedIn](https://linkedin.com/in/resonaura) • [Email](mailto:andrii.vynohradov@gmail.com) • [CV (PDF)](cv.pdf) • [Credentials](https://certificates.vynohradov.ca)
+Victoria, BC, Canada • [vynohradov.ca](https://vynohradov.ca) • [LinkedIn](https://linkedin.com/in/resonaura) • [Email](mailto:andrii.vynohradov@gmail.com) • [CV (PDF)](https://raw.githubusercontent.com/resonaura/resonaura/main/cv.pdf) • [Credentials](https://certificates.vynohradov.ca)
 
 [![Sponsor Profile](https://img.shields.io/badge/Sponsor%20Profile-EA4AAA?logo=github-sponsors&logoColor=white)](https://github.com/sponsors/resonaura)
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-FFDD00?logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/resonaura)
@@ -48,7 +48,7 @@ Real-time live performance workstation designed for deterministic zero-dropout m
   <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/flopster.png" width="760" alt="Flopster Floppy Synth Plugin" />
 </p>
 
-- **[resobox-core](https://github.com/resonaura/resobox-core)** & **[resobox-ui](https://github.com/resonaura/resobox-ui)**: Standalone Real-Time Audio Pedalboard & Appliance. Custom live guitar multi-effects unit built on a **Raspberry Pi** with a **HiFiBerry** studio-grade ADC/DAC sound card (I2S bus). Runs a tailored, stripped-down **Alpine Linux** distribution tuned for low-latency audio scheduling and zero-allocation C++ DSP processing loops (`resobox-core`) paired with a responsive control interface (`resobox-ui`).
+- **[resobox-core](https://github.com/resonaura/resobox-core)** & **[resobox-ui](https://github.com/resonaura/resobox-ui)**: Standalone Real-Time Audio Pedalboard & Appliance. Custom live guitar multi-effects unit built on a **Raspberry Pi** with a **HiFiBerry** studio-grade ADC/DAC sound card (I2S bus). Runs a custom minimal **Alpine Linux** build tuned for real-time low-latency audio scheduling with the **JACK Audio Connection Kit**, driving a modular Python DSP engine (`pedalboard` & `sounddevice`) and a responsive React 18 / TypeScript web control surface (`resobox-ui`).
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/resobox.jpg" width="460" alt="ResoBox Hardware Prototype" />
@@ -269,4 +269,4 @@ Multi-level 2D action platformer featuring custom physics, ammo management, coin
 
 - **Fachinformatiker für Anwendungsentwicklung** (IHK-Certified Dual Vocational Program, Germany) (completed ahead of schedule with honors); evaluated by WES as equivalent to a Canadian Applied Computer Science Diploma.
 - **Undergraduate Studies in Computer Science & Engineering** (Prydniprovska State Academy of Civil Engineering and Architecture, Ukraine) — 2 years of full-time coursework in Data Structures, Algorithms, and Software Engineering.
-- **Certifications & Credentials**: [View verified certificates](https://certificates.vynohradov.ca) • [Download CV (PDF)](cv.pdf)
+- **Certifications & Credentials**: [View verified certificates](https://certificates.vynohradov.ca) • [Download CV (PDF)](https://raw.githubusercontent.com/resonaura/resonaura/main/cv.pdf)
