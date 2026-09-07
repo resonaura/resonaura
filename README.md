@@ -18,9 +18,9 @@ I architect deterministic real-time C++ systems, distributed AI agent execution 
 
 ## Tier 1: Real-Time Systems, Audio DSP & Hardware Protocols
 
-### ResoStage
-*Real-Time Live Performance DAW & Stage Lighting Sequencer (Private Codebase)*  
-**Stack**: C++20, JUCE 9, Lock-Free Concurrency, Electron, React 19, Three.js, WebSockets, DMX-512, Art-Net, sACN
+### [ResoStage](https://github.com/resonaura/resostage)
+*Real-Time Live Performance DAW & Stage Lighting Sequencer*  
+**Stack**: C++20, JUCE 9, Lock-Free Concurrency, Electron, React 19, Three.js, WebSockets, DMX-512, Art-Net, sACN • **License**: GPL-3.0
 
 Real-time live performance workstation designed for deterministic zero-dropout multitrack playback synchronized with automated stage lighting rigs.
 
