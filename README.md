@@ -26,7 +26,7 @@ I architect deterministic real-time C++ systems, distributed AI agent execution 
 Real-time live performance workstation designed for deterministic zero-dropout multitrack playback synchronized with automated stage lighting rigs.
 
 <p align="center">
-  <img src="media/resostage.png" width="760" alt="ResoStage Workstation UI" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/resostage.png" width="760" alt="ResoStage Workstation UI" />
 </p>
 
 - **Deterministic Audio Engine**: Operates under a strict zero-heap-allocation policy within the real-time audio callback loop. Utilizes precomputed 64-point Kaiser-windowed Sinc interpolation for pitch shifting and sample-accurate clock synchronization across 32+ simultaneous stems.
@@ -39,31 +39,31 @@ Real-time live performance workstation designed for deterministic zero-dropout m
 - **[scratcher](https://github.com/resonaura/scratcher)**: Dual-deck vinyl scratch emulator audio plugin and standalone instrument built with JUCE 8 and C++17. Implements rotational physics simulations, fractional delay time-stretching, and bidirectional MIDI control surface mapping.
 
 <p align="center">
-  <img src="media/scratcher.gif" width="720" alt="Scratcher JUCE Audio Plugin" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/scratcher.gif" width="720" alt="Scratcher JUCE Audio Plugin" />
 </p>
 
 - **[flopster](https://github.com/resonaura/flopster)**: Software synthesizer (VST3, AU, Standalone) simulating retro floppy drive acoustics and mechanical stepping motor resonance via physical modeling synthesis and custom vector UI controls.
 
 <p align="center">
-  <img src="media/flopster.png" width="760" alt="Flopster Floppy Synth Plugin" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/flopster.png" width="760" alt="Flopster Floppy Synth Plugin" />
 </p>
 
-- **[resobox-core](https://github.com/resonaura/resobox-core)** & **[resobox-ui](https://github.com/resonaura/resobox-ui)**: Embedded Real-Time Audio Appliance. Custom hardware guitar pedalboard powered by an embedded DSP unit executing fixed-point filtering with hardware interrupts, direct memory bus ADC/DAC communication, and zero-allocation processing loops.
+- **[resobox-core](https://github.com/resonaura/resobox-core)** & **[resobox-ui](https://github.com/resonaura/resobox-ui)**: Standalone Real-Time Audio Pedalboard & Appliance. Custom live guitar multi-effects unit built on a **Raspberry Pi** with a **HiFiBerry** studio-grade ADC/DAC sound card (I2S bus). Runs a tailored, stripped-down **Alpine Linux** distribution tuned for low-latency audio scheduling and zero-allocation C++ DSP processing loops (`resobox-core`) paired with a responsive control interface (`resobox-ui`).
 
 <p align="center">
-  <img src="media/resobox.jpg" width="460" alt="ResoBox Hardware Prototype" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/resobox.jpg" width="460" alt="ResoBox Hardware Prototype" />
 </p>
 
 - **[shaitan-delay](https://github.com/resonaura/shaitan-delay)**: Stereo delay audio plugin (VST3) featuring analog tape saturation modeling, non-linear feedback damping filters, and host tempo synchronization.
 
 <p align="center">
-  <img src="media/shaitan-delay.png" width="680" alt="Shaitan Delay VST3 Plugin" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/shaitan-delay.png" width="680" alt="Shaitan Delay VST3 Plugin" />
 </p>
 
 - **[owlydist](https://github.com/resonaura/owlydist)**: Audio distortion plugin (VST3) powered by the Elementary Audio DSP engine, implementing customizable transfer-curve waveshaping and asymmetric clipping algorithms.
 
 <p align="center">
-  <img src="media/owlydist.png" width="760" alt="OwlyDist Elementary Audio Plugin" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/owlydist.png" width="760" alt="OwlyDist Elementary Audio Plugin" />
 </p>
 
 ---
@@ -87,7 +87,7 @@ Architected and scaled the core distributed infrastructure powering IndagoDev's 
 - **[scrypted-tuya](https://github.com/resonaura/scrypted-tuya)**: Low-Latency Edge Video Ingestion Pipeline. Standalone camera bridge interfacing directly with Tuya hardware, demuxing proprietary WebRTC feeds into standard sub-second RTSP relays with zero-copy packet forwarding and no cloud dependencies.
 
 <p align="center">
-  <img src="media/scrypted-tuya.png" width="760" alt="Tuya Bridge Dashboard" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/scrypted-tuya.png" width="760" alt="Tuya Bridge Dashboard" />
 </p>
 
 - **[snappie](https://github.com/resonaura/snappie)**: Hardware-accelerated multi-camera RTSP snapshot server featuring zero-disk in-memory ring buffers, supporting NVENC/CUDA, Intel VA-API/QSV, and Apple VideoToolbox.
@@ -105,7 +105,7 @@ Architected and scaled the core distributed infrastructure powering IndagoDev's 
 Interactive audio patchbay coordinator translating complex stage cabling, pedalboards, audio interfaces, and electrical distribution into a validated visual node graph.
 
 <p align="center">
-  <img src="media/resopatch.png" width="760" alt="ResoPatch Stage Routing Canvas" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/resopatch.png" width="760" alt="ResoPatch Stage Routing Canvas" />
 </p>
 
 - **WASM Obstacle Avoidance Routing**: Compiles the native C++ `libavoid` library to WebAssembly inside an isolated Web Worker, executing dynamic A* pathfinding and orthogonal obstacle avoidance to route complex cable trajectories without overlapping hardware footprints.
@@ -120,46 +120,46 @@ Interactive audio patchbay coordinator translating complex stage cabling, pedalb
 - **[rsnra.link](https://rsnra.link)** (private repository: [rsnra-link](https://github.com/resonaura/rsnra-link)): Hybrid music ecosystem combining direct high-fidelity audio streaming, interactive band storytelling, and unified smart links connecting fans to major platforms.
 
 <p align="center">
-  <img src="media/rsnra-link.png" width="760" alt="rsnra.link Platform" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/rsnra-link.png" width="760" alt="rsnra.link Platform" />
 </p>
 
 - **[rsnra.art](https://rsnra.art)** (repo: [rsnra-art](https://github.com/resonaura/rsnra-art)): Interactive digital desktop rebuilt as a fully functional, draggable, minimizable tribute to Windows 95, featuring custom window managers, retro audio design, and a playable media player.
 
 <p align="center">
-  <img src="media/rsnra-art.png" width="760" alt="rsnra.art Windows 95 Desktop Experience" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/rsnra-art.png" width="760" alt="rsnra.art Windows 95 Desktop Experience" />
 </p>
 
 - **[rsnra-auth](https://github.com/resonaura/rsnra-auth)**: Central identity provider handling OAuth single sign-on (SSO), token validation, and profile sessions across all RSNRA web services.
 - **[authorplay](https://github.com/resonaura/authorplay)**: Standalone web streaming platform for independent musicians, serving as the direct architectural predecessor to rsnra.link.
 
 <p align="center">
-  <img src="media/authorplay.png" width="760" alt="AuthorPlay Web Streaming" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/authorplay.png" width="760" alt="AuthorPlay Web Streaming" />
 </p>
 
 ### Interactive Web & Mobile
 - **[KidCanvas](https://kidcanvas.skrinkaznan.com/)**: Collaborative real-time digital canvas platform developed at IndagoDev for children and educators. Features instantaneous multi-user stroke synchronization over WebSockets, HTML5 Canvas rendering, and clean drawing tools.
 
 <p align="center">
-  <img src="media/kidcanvas.png" width="760" alt="KidCanvas Collaborative Canvas" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/kidcanvas.png" width="760" alt="KidCanvas Collaborative Canvas" />
 </p>
 
 - **[Personal Portfolio](https://github.com/resonaura/portfolio)** ([vynohradov.ca](https://vynohradov.ca)): Interactive personal portfolio website featuring custom Three.js GLSL fluid simulation shaders and responsive layout transitions.
 - **Alchemy** ([portfolio](https://github.com/resonaura/portfolio)): Multi-model LLM workspace and Chrome extension interface coordinating prompt pipelines across OpenAI and Claude APIs (IndagoDev).
 
 <p align="center">
-  <img src="media/alchemy.png" width="760" alt="Alchemy AI Workspace" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/alchemy.png" width="760" alt="Alchemy AI Workspace" />
 </p>
 
 - **UniVent** ([portfolio](https://github.com/resonaura/portfolio)): Cross-platform mobile event discovery application developed at IndagoDev, built with React Native, TypeScript, and native bridge modules for iOS and Android.
 
 <p align="center">
-  <img src="media/univent.png" width="760" alt="UniVent Mobile App" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/univent.png" width="760" alt="UniVent Mobile App" />
 </p>
 
 - **[maria-portfolio](https://github.com/resonaura/maria-portfolio)**: Designer portfolio SPA with a custom NestJS / Fastify / Sharp image transformation engine and dynamic luminance mapping.
 
 <p align="center">
-  <img src="media/maria-portfolio.png" width="760" alt="Maria Portfolio Website" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/maria-portfolio.png" width="760" alt="Maria Portfolio Website" />
 </p>
 
 ---
@@ -169,13 +169,13 @@ Interactive audio patchbay coordinator translating complex stage cabling, pedalb
 - **[foxled](https://github.com/resonaura/foxled)**: Real-Time FFT Spectrum Analyzer & Serial Protocol Driver. Captures raw system audio via WASAPI loopback, performs real-time windowed FFT frequency binning, and serializes frame-synchronized multi-zone RGB payloads over UART to addressable LED strips.
 
 <p align="center">
-  <img src="media/foxled.jpg" width="680" alt="FoxLED Ambient Monitor Lighting" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/foxled.jpg" width="680" alt="FoxLED Ambient Monitor Lighting" />
 </p>
 
 - **[ble-smart-light](https://github.com/resonaura/ble-smart-light)**: Bluetooth Low Energy Protocol Reverse Engineering. Sniffed, decompiled, and mapped proprietary 10-byte GATT write characteristics to produce a headless, deterministic device control daemon with zero cloud dependencies on Windows 10 UWP and Android.
 
 <p align="center">
-  <img src="media/ble-smart-light.jpg" width="460" alt="BLE Smart Light Hardware Controller" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/ble-smart-light.jpg" width="460" alt="BLE Smart Light Hardware Controller" />
 </p>
 
 - **[foxyswitch](https://github.com/resonaura/foxyswitch)** & **[foxyhome](https://github.com/resonaura/foxyhome)**: Custom C++ / ESP32 firmware running on physical smart wall switches with hardware debouncing interrupts and domestic sensor meshes.
@@ -184,39 +184,39 @@ Interactive audio patchbay coordinator translating complex stage cabling, pedalb
 - **[gsync](https://github.com/resonaura/gsync)**: Interactive Terminal UI (TUI) for real-time bi-directional cloud synchronization with Google Drive, rsync, and rclone.
 
 <p align="center">
-  <img src="media/gsync.png" width="760" alt="GSync Terminal UI" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/gsync.png" width="760" alt="GSync Terminal UI" />
 </p>
 
 - **[miku-renderer](https://github.com/resonaura/miku-renderer)**: Declarative Node.js and FFmpeg multi-track video composition engine with render queue management.
 - **[foxdock](https://github.com/resonaura/foxdock)**: Windows application dock featuring Fluent Acrylic design, shell integration, and background IPC daemon.
 
 <p align="center">
-  <img src="media/foxdock.jpg" width="760" alt="FoxDock Windows Dock" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/foxdock.jpg" width="760" alt="FoxDock Windows Dock" />
 </p>
 
 - **[ktulhu-server](https://github.com/resonaura/ktulhu-server)**: Home server manager with Acrylic WPF dashboard, OpenHardwareMonitor telemetry, ngrok tunnel coordinator, and Telegram webhooks.
 
 <p align="center">
-  <img src="media/ktulhu-server.jpg" width="760" alt="Ktulhu Server WPF Dashboard" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/ktulhu-server.jpg" width="760" alt="Ktulhu Server WPF Dashboard" />
 </p>
 
 - **[isekai-sub-tool](https://github.com/resonaura/isekai-sub-tool)**: Production dialogue and subtitle timing software built for The Walking Dead fan dubbing project.
 
 <p align="center">
-  <img src="media/isekai-sub-tool.jpg" width="760" alt="Isekai Sub Tool Interface" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/isekai-sub-tool.jpg" width="760" alt="Isekai Sub Tool Interface" />
 </p>
 
 - **[apps-indexator](https://github.com/resonaura/apps-indexator)**: High-speed Windows application indexer and icon extractor using direct Win32, Shell32, and GDI32 system calls.
 - **[filerabbit](https://github.com/resonaura/filerabbit)**: Cloud file storage and sharing web application built on ASP.NET Core and Entity Framework Core.
 
 <p align="center">
-  <img src="media/filerabbit.jpg" width="760" alt="FileRabbit Cloud Storage UI" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/filerabbit.jpg" width="760" alt="FileRabbit Cloud Storage UI" />
 </p>
 
 - **[resomd](https://github.com/resonaura/resomd)**: Live split-pane markdown editor with block-level scroll synchronization, cloud autosave, and headless PDF export.
 
 <p align="center">
-  <img src="media/resomd.png" width="760" alt="ResoMD Markdown Editor" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/resomd.png" width="760" alt="ResoMD Markdown Editor" />
 </p>
 
 - **[rocket-alert-monitor](https://github.com/resonaura/rocket-alert-monitor)**: Real-time emergency siren and missile alert monitoring service with push notification dispatch.
@@ -240,7 +240,7 @@ Before building real-time audio engines and distributed AI backends, I started p
 Multi-level 2D action platformer featuring custom physics, ammo management, coin drops, and locked progression tiers. When the unversioned project files corrupted during development, the original FLA source was lost. Rather than quitting, we started over from scratch with a revamped neon interface. That harsh lesson sparked an enduring obsession with version control, redundant backups, and defensive system architecture. Both milestones survive as compiled SWF binaries, playable in modern browsers via WebAssembly.
 
 <p align="center">
-  <img src="media/robohero-gameplay.png" width="760" alt="Robohero vs Zombies Gameplay" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/robohero-gameplay.png" width="760" alt="Robohero vs Zombies Gameplay" />
 </p>
 
 ### Blood Battle
@@ -251,7 +251,7 @@ Multi-level 2D action platformer featuring custom physics, ammo management, coin
 2D horizontal space combat simulator featuring multi-angle squadron intercepts, projectile ballistics, shield depletion mechanics, and an integrated cockpit HUD with telemetry readouts and callsigns. Recovered from a legacy standalone projector binary and restored for in-browser emulation.
 
 <p align="center">
-  <img src="media/blood-battle-gameplay.png" width="760" alt="Blood Battle Gameplay" />
+  <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/blood-battle-gameplay.png" width="760" alt="Blood Battle Gameplay" />
 </p>
 
 ---
