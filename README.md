@@ -115,9 +115,9 @@ Interactive audio patchbay coordinator translating complex stage cabling, pedalb
 
 ### RSNRA Music Ecosystem & Interactive Web
 *Streaming Infrastructure, Digital Identity & Creative Homages*  
-**Stack**: React 18, TypeScript, Tailwind CSS, Web Audio API, OAuth 2.0 / SSO, WebSockets
+**Stack**: Next.js 16, React 19, TypeScript, NestJS, Fastify, Tailwind CSS v4, Web Audio API, OAuth 2.0 / SSO, WebSockets
 
-- **[rsnra.link](https://rsnra.link)** (private repository: [rsnra-link](https://github.com/resonaura/rsnra-link)): Hybrid music ecosystem combining direct high-fidelity audio streaming, interactive band storytelling, and unified smart links connecting fans to major platforms.
+- **[rsnra.link](https://rsnra.link)** (private repository: [rsnra-link](https://github.com/resonaura/rsnra-link)): Hybrid music ecosystem built with Next.js 16 and React 19, combining direct high-fidelity audio streaming, interactive band storytelling, and unified smart links connecting fans to major platforms.
 
 <p align="center">
   <img src="https://raw.githubusercontent.com/resonaura/resonaura/main/media/rsnra-link.png" width="760" alt="rsnra.link Platform" />
